@@ -20,8 +20,8 @@
 </p>
 
 ### Reach me on
-<a href="https:www.linkedin.com/in/fatihaljabar"><img align="left" alt="linkedin" title="linkedin" width="21px" src="https://www.svgrepo.com/show/448234/linkedin.svg" /></a>
-<a href="https:www.instagram.com/fatihaljabar"><img align="left" alt="instagram" title="instagram" width="21px" src="https://www.svgrepo.com/show/452229/instagram-1.svg" /></a>
+<a href="https://www.linkedin.com/in/fatihaljabar"><img align="left" alt="linkedin" title="linkedin" width="21px" src="https://www.svgrepo.com/show/448234/linkedin.svg" /></a>
+<a href="https://www.instagram.com/fatihaljabar"><img align="left" alt="instagram" title="instagram" width="21px" src="https://www.svgrepo.com/show/452229/instagram-1.svg" /></a>
 <!--
 **fatihaljabar/fatihaljabar** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
