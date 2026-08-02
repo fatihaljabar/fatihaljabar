@@ -96,7 +96,7 @@ My thesis went a different direction — training CNN, LSTM, and BiLSTM models t
 
 **Sentiment Analysis on Online Reviews of Electric Vehicles Using Deep Learning**
 
-<a href="https://project-ta-fatih.streamlit.app" target="_blank" rel="noopener noreferrer">🔗 Live Demo</a> · <a href="https://github.com/fatihaljabar/project-TA" target="_blank" rel="noopener noreferrer">💻 Source Code</a>
+<a href="https://project-ta-fatih.streamlit.app" target="_blank" rel="noopener noreferrer">🔗 Live Demo</a> · <a href="https://github.com/fatihaljabar/project-TA" target="_blank" rel="noopener noreferrer">💻 Source Code</a> · <a href="https://doi.org/10.36040/jati.v10i1.17094" target="_blank" rel="noopener noreferrer">📖 Articles</a>
 
 Compared four architectures — CNN, LSTM, BiLSTM, and a CNN + BiLSTM hybrid with Attention — on Indonesian-language tweets (Jan 2023 – Aug 2025). Built the full Indonesian NLP pipeline: text cleaning, case folding, Sastrawi stemming, and lexicon-based quantile labeling. The hybrid model won at **75% accuracy / 0.76 macro F1**, and was deployed as a Streamlit app for real-time prediction.
 
@@ -112,7 +112,6 @@ Compared four architectures — CNN, LSTM, BiLSTM, and a CNN + BiLSTM hybrid wit
 - <a href="https://www.dicoding.com/certificates/2VX349OGVZYQ" target="_blank" rel="noopener noreferrer">Back-End Fundamentals with JavaScript</a> — RESTful APIs, Node.js, Hapi, AWS EC2
 - <a href="https://www.dicoding.com/certificates/NVP741O0WPR0" target="_blank" rel="noopener noreferrer">JavaScript Programming Basics</a> — OOP, functional programming, async
 - <a href="https://www.dicoding.com/certificates/6RPNYN60QZ2M" target="_blank" rel="noopener noreferrer">Building a Career as a Software Developer</a>
-- <a href="https://www.e-ujian.com/cert/7nY5W3.286294" target="_blank" rel="noopener noreferrer">TOEFL ITP — Score 540</a> — Elskill English Course
 
 ---
 
