@@ -1,9 +1,9 @@
 <h1 align="center">Hi, I'm Fatih 👋</h1>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/fatihaljabar"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-  <a href="mailto:codematee@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>
-  <a href="https://www.instagram.com/fatihaljabar"><img src="https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white" alt="Instagram"/></a>
+  <a href="https://www.linkedin.com/in/fatihaljabar"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" target="_blank"/></a>
+  <a href="mailto:fatihaljabar@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email" target="_blank"/></a>
+  <a href="https://www.instagram.com/fatihaljabar"><img src="https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white" alt="Instagram" target="_blank"/></a>
   <img src="https://komarev.com/ghpvc/?username=fatihaljabar&style=flat-square&color=0A66C2" alt="Profile views"/>
 </p>
 
@@ -11,7 +11,7 @@
 
 I build web applications with a front-end bias — interfaces that feel fast and obvious, with a backend behind them that stays out of the way.
 
-Informatics Engineering graduate (**S.Kom**, GPA **3.63/4.00**) from Universitas 17 Agustus 1945 Surabaya. Most of my work lives in the **React / Next.js / TypeScript** world: an e-commerce platform with live payment integration, a job-application tracker I actually use myself, and a POS system built for a bakery client.
+Informatics Engineering graduate (GPA **3.63/4.00**) from Universitas 17 Agustus 1945 Surabaya. Most of my work lives in the **React / Next.js / TypeScript** world: an e-commerce platform with live payment integration, a job-application tracker I actually use myself, and a POS system built for a bakery client.
 
 My thesis went a different direction — training CNN, LSTM, and BiLSTM models to read sentiment in Indonesian tweets about electric vehicles. The CNN + BiLSTM hybrid landed at **75% accuracy (macro F1 0.76)**, and I shipped it as a Streamlit app rather than leaving it in a notebook.
 
@@ -90,11 +90,11 @@ My thesis went a different direction — training CNN, LSTM, and BiLSTM models t
 
 ---
 
-## 🎓 Final Year Thesis
+## 🎓 Final Thesis
 
 **Sentiment Analysis on Online Reviews of Electric Vehicles Using Deep Learning**
 
-Compared four architectures — CNN, LSTM, BiLSTM, and a CNN + BiLSTM hybrid with Attention — on Indonesian-language tweets (Jan 2023 – Aug 2025). Built the full Indonesian NLP pipeline: text cleaning, case folding, Sastrawi stemming, and lexicon-based quantile labeling. The hybrid model won at **75% accuracy / 0.76 macro F1**, and was deployed as a Streamlit app for real-time prediction.
+Compared four architectures — CNN, LSTM, BiLSTM, and a CNN + BiLSTM hybrid with Attention — on Indonesian-language tweets (Jan 2023 – Aug 2025). Built the full Indonesian NLP pipeline: text cleaning, case folding, Sastrawi stemming, and lexicon-based quantile labeling. The hybrid model won at **75% accuracy / 0.76 macro F1**, and was deployed as a Streamlit app for real-time prediction. (https://doi.org/10.36040/jati.v10i1.17094)
 
 ---
 
@@ -108,7 +108,6 @@ Compared four architectures — CNN, LSTM, BiLSTM, and a CNN + BiLSTM hybrid wit
 - [Back-End Fundamentals with JavaScript](https://www.dicoding.com/certificates/2VX349OGVZYQ) — RESTful APIs, Node.js, Hapi, AWS EC2
 - [JavaScript Programming Basics](https://www.dicoding.com/certificates/NVP741O0WPR0) — OOP, functional programming, async
 - [Building a Career as a Software Developer](https://www.dicoding.com/certificates/6RPNYN60QZ2M)
-- [TOEFL ITP — Score 540](https://www.e-ujian.com/cert/7nY5W3.286294) — Elskill English Course
 
 ---
 
