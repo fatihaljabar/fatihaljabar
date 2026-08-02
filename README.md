@@ -1,9 +1,9 @@
 <h1 align="center">Hi, I'm Fatih 👋</h1>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/fatihaljabar"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" target="_blank"/></a>
-  <a href="mailto:fatihaljabar@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email" target="_blank"/></a>
-  <a href="https://www.instagram.com/fatihaljabar"><img src="https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white" alt="Instagram" target="_blank"/></a>
+  <a href="https://www.linkedin.com/in/fatihaljabar" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+  <a href="mailto:fatihaljabar@gmail.com" target="_blank" rel="noopener noreferrer" ><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>
+  <a href="https://www.instagram.com/fatihaljabar" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white" alt="Instagram"/></a>
   <img src="https://komarev.com/ghpvc/?username=fatihaljabar&style=flat-square&color=0A66C2" alt="Profile views"/>
 </p>
 
@@ -94,7 +94,7 @@ My thesis went a different direction — training CNN, LSTM, and BiLSTM models t
 
 **Sentiment Analysis on Online Reviews of Electric Vehicles Using Deep Learning**
 
-Compared four architectures — CNN, LSTM, BiLSTM, and a CNN + BiLSTM hybrid with Attention — on Indonesian-language tweets (Jan 2023 – Aug 2025). Built the full Indonesian NLP pipeline: text cleaning, case folding, Sastrawi stemming, and lexicon-based quantile labeling. The hybrid model won at **75% accuracy / 0.76 macro F1**, and was deployed as a Streamlit app for real-time prediction. (<a href="https://doi.org/10.36040/jati.v10i1.17094" target="_blank"/></a>)
+Compared four architectures — CNN, LSTM, BiLSTM, and a CNN + BiLSTM hybrid with Attention — on Indonesian-language tweets (Jan 2023 – Aug 2025). Built the full Indonesian NLP pipeline: text cleaning, case folding, Sastrawi stemming, and lexicon-based quantile labeling. The hybrid model won at **75% accuracy / 0.76 macro F1**, and was deployed as a Streamlit app for real-time prediction. (<a href="https://doi.org/10.36040/jati.v10i1.17094" target="_blank" rel="noopener noreferrer"/></a>)
 
 ---
 
@@ -102,12 +102,12 @@ Compared four architectures — CNN, LSTM, BiLSTM, and a CNN + BiLSTM hybrid wit
 
 <sub>Issued by <b>Dicoding Indonesia</b> (AWS-validated industry curriculum) unless noted.</sub>
 
-- [Becoming an Expert Front-End Web Developer](<a href="https://www.dicoding.com/certificates/N9ZOY1Y7DPG5" target="_blank"/></a>) — PWA, accessibility, automation testing, CI/CD
-- [Front-End Web Development Fundamentals](<a href="https://www.dicoding.com/certificates/EYX4J058OZDL" target="_blank"/></a>) — Web Components, module bundlers, async JS
-- [Front-End Web Development for Beginners](<a href="https://www.dicoding.com/certificates/EYX4J9RROZDL" target="_blank"/></a>) — DOM manipulation, events, web storage
-- [Back-End Fundamentals with JavaScript](<a href="https://www.dicoding.com/certificates/2VX349OGVZYQ" target="_blank"/></a>) — RESTful APIs, Node.js, Hapi, AWS EC2
-- [JavaScript Programming Basics](<a href="https://www.dicoding.com/certificates/NVP741O0WPR0" target="_blank"/></a>) — OOP, functional programming, async
-- [Building a Career as a Software Developer](<a href="https://www.dicoding.com/certificates/6RPNYN60QZ2M" target="_blank"/></a>)
+- [Becoming an Expert Front-End Web Developer](<a href="https://www.dicoding.com/certificates/N9ZOY1Y7DPG5" target="_blank" rel="noopener noreferrer"/></a>) — PWA, accessibility, automation testing, CI/CD
+- [Front-End Web Development Fundamentals](<a href="https://www.dicoding.com/certificates/EYX4J058OZDL" target="_blank" rel="noopener noreferrer"/></a>) — Web Components, module bundlers, async JS
+- [Front-End Web Development for Beginners](<a href="https://www.dicoding.com/certificates/EYX4J9RROZDL" target="_blank" rel="noopener noreferrer"/></a>) — DOM manipulation, events, web storage
+- [Back-End Fundamentals with JavaScript](<a href="https://www.dicoding.com/certificates/2VX349OGVZYQ" target="_blank" rel="noopener noreferrer"/></a>) — RESTful APIs, Node.js, Hapi, AWS EC2
+- [JavaScript Programming Basics](<a href="https://www.dicoding.com/certificates/NVP741O0WPR0" target="_blank" rel="noopener noreferrer"/></a>) — OOP, functional programming, async
+- [Building a Career as a Software Developer](<a href="https://www.dicoding.com/certificates/6RPNYN60QZ2M" target="_blank" rel="noopener noreferrer"/></a>)
 
 ---
 
