@@ -94,7 +94,7 @@ My thesis went a different direction — training CNN, LSTM, and BiLSTM models t
 
 **Sentiment Analysis on Online Reviews of Electric Vehicles Using Deep Learning**
 
-Compared four architectures — CNN, LSTM, BiLSTM, and a CNN + BiLSTM hybrid with Attention — on Indonesian-language tweets (Jan 2023 – Aug 2025). Built the full Indonesian NLP pipeline: text cleaning, case folding, Sastrawi stemming, and lexicon-based quantile labeling. The hybrid model won at **75% accuracy / 0.76 macro F1**, and was deployed as a Streamlit app for real-time prediction. (https://doi.org/10.36040/jati.v10i1.17094)
+Compared four architectures — CNN, LSTM, BiLSTM, and a CNN + BiLSTM hybrid with Attention — on Indonesian-language tweets (Jan 2023 – Aug 2025). Built the full Indonesian NLP pipeline: text cleaning, case folding, Sastrawi stemming, and lexicon-based quantile labeling. The hybrid model won at **75% accuracy / 0.76 macro F1**, and was deployed as a Streamlit app for real-time prediction. (<a href="https://doi.org/10.36040/jati.v10i1.17094" target="_blank"/></a>)
 
 ---
 
@@ -102,12 +102,12 @@ Compared four architectures — CNN, LSTM, BiLSTM, and a CNN + BiLSTM hybrid wit
 
 <sub>Issued by <b>Dicoding Indonesia</b> (AWS-validated industry curriculum) unless noted.</sub>
 
-- [Becoming an Expert Front-End Web Developer](https://www.dicoding.com/certificates/N9ZOY1Y7DPG5) — PWA, accessibility, automation testing, CI/CD
-- [Front-End Web Development Fundamentals](https://www.dicoding.com/certificates/EYX4J058OZDL) — Web Components, module bundlers, async JS
-- [Front-End Web Development for Beginners](https://www.dicoding.com/certificates/EYX4J9RROZDL) — DOM manipulation, events, web storage
-- [Back-End Fundamentals with JavaScript](https://www.dicoding.com/certificates/2VX349OGVZYQ) — RESTful APIs, Node.js, Hapi, AWS EC2
-- [JavaScript Programming Basics](https://www.dicoding.com/certificates/NVP741O0WPR0) — OOP, functional programming, async
-- [Building a Career as a Software Developer](https://www.dicoding.com/certificates/6RPNYN60QZ2M)
+- [Becoming an Expert Front-End Web Developer](<a href="https://www.dicoding.com/certificates/N9ZOY1Y7DPG5" target="_blank"/></a>) — PWA, accessibility, automation testing, CI/CD
+- [Front-End Web Development Fundamentals](<a href="https://www.dicoding.com/certificates/EYX4J058OZDL" target="_blank"/></a>) — Web Components, module bundlers, async JS
+- [Front-End Web Development for Beginners](<a href="https://www.dicoding.com/certificates/EYX4J9RROZDL" target="_blank"/></a>) — DOM manipulation, events, web storage
+- [Back-End Fundamentals with JavaScript](<a href="https://www.dicoding.com/certificates/2VX349OGVZYQ" target="_blank"/></a>) — RESTful APIs, Node.js, Hapi, AWS EC2
+- [JavaScript Programming Basics](<a href="https://www.dicoding.com/certificates/NVP741O0WPR0" target="_blank"/></a>) — OOP, functional programming, async
+- [Building a Career as a Software Developer](<a href="https://www.dicoding.com/certificates/6RPNYN60QZ2M" target="_blank"/></a>)
 
 ---
 
