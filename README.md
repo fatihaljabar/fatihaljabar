@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://www.linkedin.com/in/fatihaljabar" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-  <a href="mailto:fatihaljabar@gmail.com" target="_blank" rel="noopener noreferrer" ><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>
+  <a href="mailto:fatihaljabar@gmail.com" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>
   <a href="https://www.instagram.com/fatihaljabar" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white" alt="Instagram"/></a>
   <img src="https://komarev.com/ghpvc/?username=fatihaljabar&style=flat-square&color=0A66C2" alt="Profile views"/>
 </p>
@@ -61,7 +61,7 @@ My thesis went a different direction — training CNN, LSTM, and BiLSTM models t
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
 ![Keras](https://img.shields.io/badge/Keras-D00000?style=flat-square&logo=keras&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
+![scikit--learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
 ![pandas](https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
@@ -76,6 +76,8 @@ My thesis went a different direction — training CNN, LSTM, and BiLSTM models t
 ![Biome](https://img.shields.io/badge/Biome-60A5FA?style=flat-square&logo=biome&logoColor=white)
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white)
 ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white)
+![Claude Code](https://img.shields.io/badge/Claude_Code-D97757?style=flat-square&logo=claude&logoColor=white)
+![Codex](https://img.shields.io/badge/Codex-412991?style=flat-square&logo=openai&logoColor=white)
 
 ---
 
@@ -83,10 +85,10 @@ My thesis went a different direction — training CNN, LSTM, and BiLSTM models t
 
 | Project | What it does | Stack |
 |---|---|---|
-| **[tracking-lamaran](https://github.com/fatihaljabar/tracking-lamaran)** | Job-hunt companion — tracks applications, stages and follow-ups, with Google sign-in, file uploads and automated email reminders | Next.js · Drizzle (MySQL) · Auth.js · Cloudflare R2 · Jest |
-| **[Sports-Event-Management-Dashboard](https://github.com/fatihaljabar/Sports-Event-Management-Dashboard)** | Tournament management — multi-step athlete registration, team quotas, live bracket and score tracking | Next.js · Supabase · React Query · Recharts |
-| **[sams-pos-demo](https://github.com/fatihaljabar/sams-pos-demo)** | POS & inventory prototype for a bakery client — checkout, purchasing, production, multi-branch stock, audit logs | Next.js · TypeScript · Tailwind |
-| **[portfolio](https://github.com/fatihaljabar/portfolio)** | Multilingual personal site with dynamic theming and animated navigation | Next.js · Prisma · Supabase · Framer Motion |
+| **<a href="https://github.com/fatihaljabar/tracking-lamaran" target="_blank" rel="noopener noreferrer">tracking-lamaran</a>** | Job-hunt companion — tracks applications, stages and follow-ups, with Google sign-in, file uploads and automated email reminders | Next.js · Drizzle (MySQL) · Auth.js · Cloudflare R2 · Jest |
+| **<a href="https://github.com/fatihaljabar/Sports-Event-Management-Dashboard" target="_blank" rel="noopener noreferrer">Sports-Event-Management-Dashboard</a>** | Tournament management — multi-step athlete registration, team quotas, live bracket and score tracking | Next.js · Supabase · React Query · Recharts |
+| **<a href="https://github.com/fatihaljabar/sams-pos-demo" target="_blank" rel="noopener noreferrer">sams-pos-demo</a>** | POS & inventory prototype for a bakery client — checkout, purchasing, production, multi-branch stock, audit logs | Next.js · TypeScript · Tailwind |
+| **<a href="https://github.com/fatihaljabar/portfolio" target="_blank" rel="noopener noreferrer">portfolio</a>** | Multilingual personal site with dynamic theming and animated navigation | Next.js · Prisma · Supabase · Framer Motion |
 
 ---
 
@@ -94,7 +96,9 @@ My thesis went a different direction — training CNN, LSTM, and BiLSTM models t
 
 **Sentiment Analysis on Online Reviews of Electric Vehicles Using Deep Learning**
 
-Compared four architectures — CNN, LSTM, BiLSTM, and a CNN + BiLSTM hybrid with Attention — on Indonesian-language tweets (Jan 2023 – Aug 2025). Built the full Indonesian NLP pipeline: text cleaning, case folding, Sastrawi stemming, and lexicon-based quantile labeling. The hybrid model won at **75% accuracy / 0.76 macro F1**, and was deployed as a Streamlit app for real-time prediction. (<a href="https://doi.org/10.36040/jati.v10i1.17094" target="_blank" rel="noopener noreferrer"/></a>)
+<a href="https://project-ta-fatih.streamlit.app" target="_blank" rel="noopener noreferrer">🔗 Live Demo</a> · <a href="https://github.com/fatihaljabar/project-TA" target="_blank" rel="noopener noreferrer">💻 Source Code</a>
+
+Compared four architectures — CNN, LSTM, BiLSTM, and a CNN + BiLSTM hybrid with Attention — on Indonesian-language tweets (Jan 2023 – Aug 2025). Built the full Indonesian NLP pipeline: text cleaning, case folding, Sastrawi stemming, and lexicon-based quantile labeling. The hybrid model won at **75% accuracy / 0.76 macro F1**, and was deployed as a Streamlit app for real-time prediction.
 
 ---
 
@@ -102,12 +106,13 @@ Compared four architectures — CNN, LSTM, BiLSTM, and a CNN + BiLSTM hybrid wit
 
 <sub>Issued by <b>Dicoding Indonesia</b> (AWS-validated industry curriculum) unless noted.</sub>
 
-- [Becoming an Expert Front-End Web Developer](<a href="https://www.dicoding.com/certificates/N9ZOY1Y7DPG5" target="_blank" rel="noopener noreferrer"/></a>) — PWA, accessibility, automation testing, CI/CD
-- [Front-End Web Development Fundamentals](<a href="https://www.dicoding.com/certificates/EYX4J058OZDL" target="_blank" rel="noopener noreferrer"/></a>) — Web Components, module bundlers, async JS
-- [Front-End Web Development for Beginners](<a href="https://www.dicoding.com/certificates/EYX4J9RROZDL" target="_blank" rel="noopener noreferrer"/></a>) — DOM manipulation, events, web storage
-- [Back-End Fundamentals with JavaScript](<a href="https://www.dicoding.com/certificates/2VX349OGVZYQ" target="_blank" rel="noopener noreferrer"/></a>) — RESTful APIs, Node.js, Hapi, AWS EC2
-- [JavaScript Programming Basics](<a href="https://www.dicoding.com/certificates/NVP741O0WPR0" target="_blank" rel="noopener noreferrer"/></a>) — OOP, functional programming, async
-- [Building a Career as a Software Developer](<a href="https://www.dicoding.com/certificates/6RPNYN60QZ2M" target="_blank" rel="noopener noreferrer"/></a>)
+- <a href="https://www.dicoding.com/certificates/N9ZOY1Y7DPG5" target="_blank" rel="noopener noreferrer">Becoming an Expert Front-End Web Developer</a> — PWA, accessibility, automation testing, CI/CD
+- <a href="https://www.dicoding.com/certificates/EYX4J058OZDL" target="_blank" rel="noopener noreferrer">Front-End Web Development Fundamentals</a> — Web Components, module bundlers, async JS
+- <a href="https://www.dicoding.com/certificates/EYX4J9RROZDL" target="_blank" rel="noopener noreferrer">Front-End Web Development for Beginners</a> — DOM manipulation, events, web storage
+- <a href="https://www.dicoding.com/certificates/2VX349OGVZYQ" target="_blank" rel="noopener noreferrer">Back-End Fundamentals with JavaScript</a> — RESTful APIs, Node.js, Hapi, AWS EC2
+- <a href="https://www.dicoding.com/certificates/NVP741O0WPR0" target="_blank" rel="noopener noreferrer">JavaScript Programming Basics</a> — OOP, functional programming, async
+- <a href="https://www.dicoding.com/certificates/6RPNYN60QZ2M" target="_blank" rel="noopener noreferrer">Building a Career as a Software Developer</a>
+- <a href="https://www.e-ujian.com/cert/7nY5W3.286294" target="_blank" rel="noopener noreferrer">TOEFL ITP — Score 540</a> — Elskill English Course
 
 ---
 
