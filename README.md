@@ -11,7 +11,7 @@
 
 I build web applications with a front-end bias — interfaces that feel fast and obvious, with a backend behind them that stays out of the way.
 
-Informatics Engineering graduate (GPA **3.63/4.00**) from Universitas 17 Agustus 1945 Surabaya. Most of my work lives in the **React / Next.js / TypeScript** world: an e-commerce platform with live payment integration, a job-application tracker I actually use myself, and a POS system built for a bakery client.
+Informatics Engineering graduate (GPA **3.63/4.00**) from Universitas 17 Agustus 1945 Surabaya. Most of my work lives in the **React / Next.js / TypeScript** world: an e-commerce platform with live payment integration, a job-application tracker now live in production at trackinglamaran.site, and a POS system built for a bakery client.
 
 My thesis went a different direction — training CNN, LSTM, and BiLSTM models to read sentiment in Indonesian tweets about electric vehicles. The CNN + BiLSTM hybrid landed at **75% accuracy (macro F1 0.76)**, and I shipped it as a Streamlit app rather than leaving it in a notebook.
 
@@ -39,6 +39,7 @@ My thesis went a different direction — training CNN, LSTM, and BiLSTM models t
 ![TanStack Query](https://img.shields.io/badge/TanStack_Query-FF4154?style=flat-square&logo=reactquery&logoColor=white)
 ![Recharts](https://img.shields.io/badge/Recharts-22B5BF?style=flat-square&logo=chartdotjs&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=flat-square&logo=reactrouter&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white)
 
 **Back-End**<br>
@@ -48,10 +49,14 @@ My thesis went a different direction — training CNN, LSTM, and BiLSTM models t
 ![Drizzle ORM](https://img.shields.io/badge/Drizzle_ORM-C5F74F?style=flat-square&logo=drizzle&logoColor=black)
 ![Auth.js](https://img.shields.io/badge/Auth.js-000000?style=flat-square&logo=auth0&logoColor=white)
 ![Zod](https://img.shields.io/badge/Zod-3E67B1?style=flat-square&logo=zod&logoColor=white)
+![Google Identity Services](https://img.shields.io/badge/Google_Identity-4285F4?style=flat-square&logo=google&logoColor=white)
+![aws4fetch](https://img.shields.io/badge/aws4fetch-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white)
+![Resend](https://img.shields.io/badge/Resend-000000?style=flat-square&logo=resend&logoColor=white)
 
 **Databases & Infra**<br>
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=mariadb&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
@@ -85,7 +90,7 @@ My thesis went a different direction — training CNN, LSTM, and BiLSTM models t
 
 | Project | What it does | Stack |
 |---|---|---|
-| **<a href="https://github.com/fatihaljabar/tracking-lamaran" target="_blank" rel="noopener noreferrer">tracking-lamaran</a>** | Job-hunt companion — tracks applications, stages and follow-ups, with Google sign-in, file uploads and automated email reminders | Next.js · Drizzle (MySQL) · Auth.js · Cloudflare R2 · Jest |
+| **<a href="https://github.com/fatihaljabar/application-tracker" target="_blank" rel="noopener noreferrer">application-tracker</a>** | Job-hunt companion — 11-stage pipeline, 14-field tracking, deadline & interview reminders, document uploads, stats. **Live in production at <a href="https://trackinglamaran.site" target="_blank" rel="noopener noreferrer">trackinglamaran.site</a>** | React · Vite · Express · Drizzle (MariaDB) · Cloudflare R2 · Resend |
 | **<a href="https://github.com/fatihaljabar/Sports-Event-Management-Dashboard" target="_blank" rel="noopener noreferrer">Sports-Event-Management-Dashboard</a>** | Tournament management — multi-step athlete registration, team quotas, live bracket and score tracking | Next.js · Supabase · React Query · Recharts |
 | **<a href="https://github.com/fatihaljabar/sams-pos-demo" target="_blank" rel="noopener noreferrer">sams-pos-demo</a>** | POS & inventory prototype for a bakery client — checkout, purchasing, production, multi-branch stock, audit logs | Next.js · TypeScript · Tailwind |
 | **<a href="https://github.com/fatihaljabar/portfolio" target="_blank" rel="noopener noreferrer">portfolio</a>** | Multilingual personal site with dynamic theming and animated navigation | Next.js · Prisma · Supabase · Framer Motion |
