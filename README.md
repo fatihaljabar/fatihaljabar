@@ -11,7 +11,7 @@
 
 I build web applications with a front-end bias — interfaces that feel fast and obvious, with a backend behind them that stays out of the way.
 
-Informatics Engineering graduate (GPA **3.63/4.00**) from Universitas 17 Agustus 1945 Surabaya. Most of my work lives in the **React / Next.js / TypeScript** world: an e-commerce platform with live payment integration, a job-application tracker now live in production at trackinglamaran.site, and a POS system built for a bakery client.
+Informatics Engineering graduate (GPA **3.63/4.00**) from Universitas 17 Agustus 1945 Surabaya. Most of my work lives in the **React / Next.js / TypeScript** world, with some Vue mixed in: an e-commerce platform with live payment integration, a job-application tracker live in production at trackinglamaran.site, a bill-splitting app with in-browser OCR live at splitbills.site, and a POS system built for a bakery client.
 
 My thesis went a different direction — training CNN, LSTM, and BiLSTM models to read sentiment in Indonesian tweets about electric vehicles. The CNN + BiLSTM hybrid landed at **75% accuracy (macro F1 0.76)**, and I shipped it as a Streamlit app rather than leaving it in a notebook.
 
@@ -40,11 +40,13 @@ My thesis went a different direction — training CNN, LSTM, and BiLSTM models t
 ![Recharts](https://img.shields.io/badge/Recharts-22B5BF?style=flat-square&logo=chartdotjs&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=flat-square&logo=reactrouter&logoColor=white)
+![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white)
 
 **Back-End**<br>
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
 ![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
+![Hono](https://img.shields.io/badge/Hono-E36002?style=flat-square&logo=hono&logoColor=white)
 ![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white)
 ![Drizzle ORM](https://img.shields.io/badge/Drizzle_ORM-C5F74F?style=flat-square&logo=drizzle&logoColor=black)
 ![Auth.js](https://img.shields.io/badge/Auth.js-000000?style=flat-square&logo=auth0&logoColor=white)
@@ -67,7 +69,7 @@ My thesis went a different direction — training CNN, LSTM, and BiLSTM models t
 ![Keras](https://img.shields.io/badge/Keras-D00000?style=flat-square&logo=keras&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
 ![scikit--learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
-![pandas](https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![pandar](https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
@@ -91,6 +93,7 @@ My thesis went a different direction — training CNN, LSTM, and BiLSTM models t
 | Project | What it does | Stack |
 |---|---|---|
 | **<a href="https://github.com/fatihaljabar/application-tracker" target="_blank" rel="noopener noreferrer">application-tracker</a>** | Job-hunt companion — 11-stage pipeline, 14-field tracking, deadline & interview reminders, document uploads, stats. **Live in production at <a href="https://trackinglamaran.site" target="_blank" rel="noopener noreferrer">trackinglamaran.site</a>** | React · Vite · Express · Drizzle (MariaDB) · Cloudflare R2 · Resend |
+| **<a href="https://github.com/fatihaljabar/splitbill" target="_blank" rel="noopener noreferrer">splitbill</a>** | Bill-splitting app — in-browser OCR receipt scanning, flexible item/percentage splitting with exact-rupiah rounding, privacy-first short links. **Live in production at <a href="https://splitbills.site" target="_blank" rel="noopener noreferrer">splitbills.site</a>** | Vue 3 · TypeScript · Hono · Drizzle (MySQL) · Tesseract.js |
 | **<a href="https://github.com/fatihaljabar/Sports-Event-Management-Dashboard" target="_blank" rel="noopener noreferrer">Sports-Event-Management-Dashboard</a>** | Tournament management — multi-step athlete registration, team quotas, live bracket and score tracking | Next.js · Supabase · React Query · Recharts |
 | **<a href="https://github.com/fatihaljabar/sams-pos-demo" target="_blank" rel="noopener noreferrer">sams-pos-demo</a>** | POS & inventory prototype for a bakery client — checkout, purchasing, production, multi-branch stock, audit logs | Next.js · TypeScript · Tailwind |
 | **<a href="https://github.com/fatihaljabar/portfolio" target="_blank" rel="noopener noreferrer">portfolio</a>** | Multilingual personal site with dynamic theming and animated navigation | Next.js · Prisma · Supabase · Framer Motion |
