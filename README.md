@@ -9,11 +9,11 @@
 
 ---
 
-I build web applications with a front-end bias — interfaces that feel fast and obvious, with a backend behind them that stays out of the way.
+I build web applications with a front-end bias: interfaces that feel fast and obvious, with a backend behind them that stays out of the way.
 
-Informatics Engineering graduate (GPA **3.63/4.00**) from Universitas 17 Agustus 1945 Surabaya. Most of my work lives in the **React / Next.js / TypeScript** world, with some Vue mixed in: an e-commerce platform with live payment integration, a job-application tracker live in production at trackinglamaran.site, a bill-splitting app with in-browser OCR live at splitbills.site, and a POS system built for a bakery client.
+Computer Science graduate (GPA **3.63/4.00**) from Universitas 17 Agustus 1945 Surabaya. Most of my work lives in the **React / Next.js / TypeScript** world, with some Vue mixed in: an e-commerce platform with live payment integration, a job-application tracker live in production at trackinglamaran.site, a bill-splitting app with in-browser OCR live at splitbills.site, and a POS system built for a bakery client.
 
-My thesis went a different direction — training CNN, LSTM, and BiLSTM models to read sentiment in Indonesian tweets about electric vehicles. The CNN + BiLSTM hybrid landed at **75% accuracy (macro F1 0.76)**, and I shipped it as a Streamlit app rather than leaving it in a notebook.
+My thesis went a different direction: training CNN, LSTM, and BiLSTM models to read sentiment in Indonesian tweets about electric vehicles. The CNN + BiLSTM hybrid landed at **75% accuracy (macro F1 0.76)**, and I shipped it as a Streamlit app rather than leaving it in a notebook.
 
 🌏 Based in Indonesia · 💼 **Open to remote front-end / full-stack roles**
 
@@ -77,7 +77,7 @@ My thesis went a different direction — training CNN, LSTM, and BiLSTM models t
 **Testing & Tooling**<br>
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
-![Jest](https://img.shields.io/badge/Jest-C21325?style=flat-square&logo=jest&logoColor=white)
+
 ![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white)
 ![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=flat-square&logo=eslint&logoColor=white)
 ![Biome](https://img.shields.io/badge/Biome-60A5FA?style=flat-square&logo=biome&logoColor=white)
@@ -92,10 +92,10 @@ My thesis went a different direction — training CNN, LSTM, and BiLSTM models t
 
 | Project | What it does | Stack |
 |---|---|---|
-| **<a href="https://github.com/fatihaljabar/application-tracker" target="_blank" rel="noopener noreferrer">application-tracker</a>** | Job-hunt companion — 11-stage pipeline, 14-field tracking, deadline & interview reminders, document uploads, stats. **Live in production at <a href="https://trackinglamaran.site" target="_blank" rel="noopener noreferrer">trackinglamaran.site</a>** | React · Vite · Express · Drizzle (MariaDB) · Cloudflare R2 · Resend |
-| **<a href="https://github.com/fatihaljabar/splitbill" target="_blank" rel="noopener noreferrer">splitbill</a>** | Bill-splitting app — in-browser OCR receipt scanning, flexible item/percentage splitting with exact-rupiah rounding, privacy-first short links. **Live in production at <a href="https://splitbills.site" target="_blank" rel="noopener noreferrer">splitbills.site</a>** | Vue 3 · TypeScript · Hono · Drizzle (MySQL) · Tesseract.js |
-| **<a href="https://github.com/fatihaljabar/Sports-Event-Management-Dashboard" target="_blank" rel="noopener noreferrer">Sports-Event-Management-Dashboard</a>** | Tournament management — multi-step athlete registration, team quotas, live bracket and score tracking | Next.js · Supabase · React Query · Recharts |
-| **<a href="https://github.com/fatihaljabar/sams-pos-demo" target="_blank" rel="noopener noreferrer">sams-pos-demo</a>** | POS & inventory prototype for a bakery client — checkout, purchasing, production, multi-branch stock, audit logs | Next.js · TypeScript · Tailwind |
+| **<a href="https://github.com/fatihaljabar/application-tracker" target="_blank" rel="noopener noreferrer">application-tracker</a>** | Job-hunt companion: 11-stage pipeline, 14-field tracking, deadline & interview reminders, document uploads, stats. **Live in production at <a href="https://trackinglamaran.site" target="_blank" rel="noopener noreferrer">trackinglamaran.site</a>** | React · Vite · Express · Drizzle (MariaDB) · Cloudflare R2 · Resend |
+| **<a href="https://github.com/fatihaljabar/splitbill" target="_blank" rel="noopener noreferrer">splitbill</a>** | Bill-splitting app: in-browser OCR receipt scanning, flexible item/percentage splitting with exact-rupiah rounding, privacy-first short links. **Live in production at <a href="https://splitbills.site" target="_blank" rel="noopener noreferrer">splitbills.site</a>** | Vue 3 · TypeScript · Hono · Drizzle (MySQL) · Tesseract.js |
+| **<a href="https://github.com/fatihaljabar/Sports-Event-Management-Dashboard" target="_blank" rel="noopener noreferrer">Sports-Event-Management-Dashboard</a>** | Tournament management: multi-step athlete registration, team quotas, live bracket and score tracking | React · Vite · React Router · Framer Motion |
+| **sams-pos-demo (private repo)** | POS & inventory prototype for a bakery client: checkout, purchasing, production, multi-branch stock, audit logs | Next.js · TypeScript · Tailwind |
 | **<a href="https://github.com/fatihaljabar/portfolio" target="_blank" rel="noopener noreferrer">portfolio</a>** | Multilingual personal site with dynamic theming and animated navigation | Next.js · Prisma · Supabase · Framer Motion |
 
 ---
@@ -106,19 +106,19 @@ My thesis went a different direction — training CNN, LSTM, and BiLSTM models t
 
 <a href="https://project-ta-fatih.streamlit.app" target="_blank" rel="noopener noreferrer">🔗 Live Demo</a> · <a href="https://github.com/fatihaljabar/project-TA" target="_blank" rel="noopener noreferrer">💻 Source Code</a> · <a href="https://doi.org/10.36040/jati.v10i1.17094" target="_blank" rel="noopener noreferrer">📖 Articles</a>
 
-Compared four architectures — CNN, LSTM, BiLSTM, and a CNN + BiLSTM hybrid with Attention — on Indonesian-language tweets (Jan 2023 – Aug 2025). Built the full Indonesian NLP pipeline: text cleaning, case folding, Sastrawi stemming, and lexicon-based quantile labeling. The hybrid model won at **75% accuracy / 0.76 macro F1**, and was deployed as a Streamlit app for real-time prediction.
+Compared four architectures (CNN, LSTM, BiLSTM, and a CNN + BiLSTM hybrid with Attention) on Indonesian-language tweets (Jan 2023 – Aug 2025). Built the full Indonesian NLP pipeline: text cleaning, case folding, Sastrawi stemming, and lexicon-based quantile labeling. The hybrid model won at **75% accuracy / 0.76 macro F1**, and was deployed as a Streamlit app for real-time prediction.
 
 ---
 
 ## 📜 Certifications
 
-<sub>Issued by <b>Dicoding Indonesia</b> (AWS-validated industry curriculum) unless noted.</sub>
+<sub>Issued by <b>Dicoding Indonesia</b> unless noted.</sub>
 
-- <a href="https://www.dicoding.com/certificates/N9ZOY1Y7DPG5" target="_blank" rel="noopener noreferrer">Becoming an Expert Front-End Web Developer</a> — PWA, accessibility, automation testing, CI/CD
-- <a href="https://www.dicoding.com/certificates/EYX4J058OZDL" target="_blank" rel="noopener noreferrer">Front-End Web Development Fundamentals</a> — Web Components, module bundlers, async JS
-- <a href="https://www.dicoding.com/certificates/EYX4J9RROZDL" target="_blank" rel="noopener noreferrer">Front-End Web Development for Beginners</a> — DOM manipulation, events, web storage
-- <a href="https://www.dicoding.com/certificates/2VX349OGVZYQ" target="_blank" rel="noopener noreferrer">Back-End Fundamentals with JavaScript</a> — RESTful APIs, Node.js, Hapi, AWS EC2
-- <a href="https://www.dicoding.com/certificates/NVP741O0WPR0" target="_blank" rel="noopener noreferrer">JavaScript Programming Basics</a> — OOP, functional programming, async
+- <a href="https://www.dicoding.com/certificates/N9ZOY1Y7DPG5" target="_blank" rel="noopener noreferrer">Becoming an Expert Front-End Web Developer</a>: PWA, accessibility, automation testing, CI/CD
+- <a href="https://www.dicoding.com/certificates/EYX4J058OZDL" target="_blank" rel="noopener noreferrer">Front-End Web Development Fundamentals</a>: Web Components, module bundlers, async JS
+- <a href="https://www.dicoding.com/certificates/EYX4J9RROZDL" target="_blank" rel="noopener noreferrer">Front-End Web Development for Beginners</a>: DOM manipulation, events, web storage
+- <a href="https://www.dicoding.com/certificates/2VX349OGVZYQ" target="_blank" rel="noopener noreferrer">Back-End Fundamentals with JavaScript</a>: RESTful APIs, Node.js, Hapi, AWS EC2
+- <a href="https://www.dicoding.com/certificates/NVP741O0WPR0" target="_blank" rel="noopener noreferrer">JavaScript Programming Basics</a>: OOP, functional programming, async
 - <a href="https://www.dicoding.com/certificates/6RPNYN60QZ2M" target="_blank" rel="noopener noreferrer">Building a Career as a Software Developer</a>
 
 ---
@@ -132,4 +132,4 @@ Compared four architectures — CNN, LSTM, BiLSTM, and a CNN + BiLSTM hybrid wit
 
 ---
 
-<p align="center"><i>Open to remote opportunities — feel free to reach out.</i></p>
+<p align="center"><i>Open to remote opportunities: feel free to reach out.</i></p>
