@@ -1,4 +1,4 @@
-<h1 align="center">Hi, I'm Fatih 👋</h1>
+···<h1 align="center">Hi, I'm Fatih 👋</h1>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/fatihaljabar" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
@@ -96,7 +96,7 @@ My thesis went a different direction: training CNN, LSTM, and BiLSTM models to r
 | **<a href="https://github.com/fatihaljabar/splitbill" target="_blank" rel="noopener noreferrer">splitbill</a>** | Bill-splitting app: in-browser OCR receipt scanning, flexible item/percentage splitting with exact-rupiah rounding, privacy-first short links. **Live in production at <a href="https://splitbills.site" target="_blank" rel="noopener noreferrer">splitbills.site</a>** | Vue 3 · TypeScript · Hono · Drizzle (MySQL) · Tesseract.js |
 | **<a href="https://github.com/fatihaljabar/Sports-Event-Management-Dashboard" target="_blank" rel="noopener noreferrer">Sports-Event-Management-Dashboard</a>** | Tournament management: multi-step athlete registration, team quotas, live bracket and score tracking | React · Vite · React Router · Framer Motion |
 | **sams-pos-demo (private repo)** | POS & inventory prototype for a bakery client: checkout, purchasing, production, multi-branch stock, audit logs | Next.js · TypeScript · Tailwind |
-| **<a href="https://github.com/fatihaljabar/portfolio" target="_blank" rel="noopener noreferrer">portfolio</a>** | Multilingual personal site with dynamic theming and animated navigation | Next.js · Prisma · Supabase · Framer Motion |
+| **<a href="https://github.com/fatihaljabar/portfolio" target="_blank" rel="noopener noreferrer">portfolio</a>** | Self-service CMS: bilingual EN/ID, dark mode, admin dashboard for content, whole-codebase security audit completed. **Live in production at <a href="https://fatihaljabar.com" target="_blank" rel="noopener noreferrer">fatihaljabar.com</a>** | Next.js · TypeScript · Prisma · Supabase · next-intl |
 
 ---
 
