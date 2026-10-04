@@ -10,9 +10,10 @@ passes the roller's top tangent point it pivots about the roller centre, a
 quarter turn over pi*R/2 of belt travel (the same omega as the roller), and
 leaves through the clip at the end of the belt.
 
-Every belt carries eight headline tools, few enough that all of them sit fully
-on the belt in the rest frame, which is also the static (reduced-motion) frame
-and the first frame at page load. The full list lives in toolbox.svg.
+Every belt carries all the tools of its two toolbox groups, so over one lap the
+three belts show all of them. The rest frame (static, reduced motion and the
+first frame at page load) packs the headline tools from the tail end; the rest
+wait behind the tail clip and ride in once the belt runs.
 """
 
 from __future__ import annotations
@@ -23,23 +24,29 @@ import os
 
 from svgkit import Doc, num, rect
 from theme import *  # noqa: F403
+from toolbox import GLYPH_OF, GLYPHS, GROUPS
 
 LOGOS = json.load(open(os.path.join(os.path.dirname(__file__), "data", "logos.json")))
 
+# The belts carry every tool in the toolbox, grouped two toolbox groups per belt,
+# so the moving stack and the full toolbox can never disagree. Each belt starts
+# with its headline tools, which are the ones on the belt in the rest frame.
+HEADLINE = {"TypeScript", "React", "Next.js", "Vue.js", "Tailwind CSS", "Framer Motion", "TanStack Query", "Vite",
+            "Node.js", "Express", "Hono", "Prisma", "Drizzle ORM", "PostgreSQL", "Supabase", "Docker",
+            "Python", "TensorFlow", "PyTorch", "scikit-learn", "Claude Code", "Vitest", "GitHub Actions", "Git"}
+BELTS = [("Languages and front-end", 52.0, ("Languages", "Front-end")),
+         ("Back-end, data and infra", 46.0, ("Back-end", "Databases and infra")),
+         ("Machine learning and tooling", 58.0, ("Machine learning", "Testing and tooling"))]
+
+
+def _belt(groups):
+    items = [t for name, its in GROUPS if name in groups for t in its]
+    return [t for t in items if t[0] in HEADLINE] + [t for t in items if t[0] not in HEADLINE]
+
+
 # (heading, belt speed in px/s, [(label, Simple Icons slug or None)])
-# None means the tool has no official mark (or only a wordmark): a text-only tag.
-ROWS = [
-    ("Front-end", 40.0, [("TypeScript", "typescript"), ("React", "react"), ("Next.js", "nextdotjs"),
-                         ("Vue.js", "vuedotjs"), ("Tailwind CSS", "tailwindcss"), ("Framer Motion", "framer"),
-                         ("TanStack Query", "tanstack"), ("Vite", "vite")]),
-    ("Back-end and data", 34.0, [("Node.js", "nodedotjs"), ("Express", "express"), ("Hono", "hono"),
-                                 ("Prisma", "prisma"), ("Drizzle ORM", "drizzle"), ("PostgreSQL", "postgresql"),
-                                 ("Supabase", "supabase"), ("Docker", "docker")]),
-    ("Machine learning and tooling", 44.0, [("Python", "python"), ("TensorFlow", "tensorflow"),
-                                            ("PyTorch", "pytorch"), ("scikit-learn", "scikitlearn"),
-                                            ("pandas", "pandas"), ("Streamlit", "streamlit"), ("Vitest", "vitest"),
-                                            ("GitHub Actions", "githubactions")]),
-]
+ROWS = [(label, v, _belt(groups)) for label, v, groups in BELTS]
+assert sum(len(it) for _, _, it in ROWS) == sum(len(it) for _, it in GROUPS)
 
 W = 1200
 X0, X1 = 52, 1148  # roller centres: X0 tail, X1 head (drive)
@@ -51,6 +58,7 @@ BELT0 = 106  # top surface of the first belt
 
 TAG_H = 40
 TAG_GAP = 8
+RUN_GAP = 22  # spacing between tags while the belt runs
 PAD_L, ICON, ICON_GAP, PAD_R = 12, 20, 9, 12
 LABEL = 17
 LIFT = 1.3  # belt stroke half width plus tag stroke half width: the tag rests on the rubber
@@ -64,7 +72,7 @@ ROLL, ROLL_EDGE, SPOKE, HUB = "#1E2228", "#3A3F48", "#4A505B", "#2F343C"
 
 def tag_width(name: str, slug: str | None) -> float:
     tw = SEMI.width(name, LABEL)
-    return (PAD_L + ICON + ICON_GAP + tw + PAD_R) if slug else (PAD_L + tw + PAD_R)
+    return PAD_L + ICON + ICON_GAP + tw + PAD_R  # every tool has a mark or a glyph
 
 
 def tag(d: Doc, name: str, slug: str | None, y_bottom: float) -> str:
@@ -77,7 +85,11 @@ def tag(d: Doc, name: str, slug: str | None, y_bottom: float) -> str:
         k = ICON / 24
         out += (f'<path transform="translate({num(x)} {num(y + (TAG_H - ICON) / 2)}) scale({k:.4f})" '
                 f'd="{LOGOS[slug]["path"]}" fill="{TEXT}"/>')
-        x += ICON + ICON_GAP
+    else:  # a Lucide line glyph on the same 24 grid
+        out += (f'<g transform="translate({num(x)} {num(y + (TAG_H - ICON) / 2)}) scale({ICON / 24:.4f})" '
+                f'fill="none" stroke="{TEXT}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'
+                f'{GLYPHS[GLYPH_OF[name]]}</g>')
+    x += ICON + ICON_GAP
     out += d.text(name, x, y + TAG_H / 2 + 6, LABEL, SEMI, fill=TEXT)
     return out
 
@@ -90,7 +102,7 @@ def pct(v: float) -> str:
 def build() -> None:
     H = BELT0 + ROW_H * (len(ROWS) - 1) + 2 * R + 36
     d = Doc(W, H, "Tech stack on three conveyor belts",
-            "Three conveyor belts carry the headline tools, eight per belt; the toolbox lists every tool. "
+            f"Three conveyor belts carry all {sum(len(it) for _, _, it in ROWS)} tools of the toolbox. "
             + " ".join(f"{label}: {', '.join(n for n, _ in items)}." for label, _, items in ROWS))
     d.style(BASE_CSS)
     d.defs.append(f'<clipPath id="run"><rect x="{CL}" y="0" width="{CR - CL}" height="{H}"/></clipPath>')
@@ -133,17 +145,21 @@ def build() -> None:
         # frame (static and reduced-motion) packs the same tags TAG_GAP apart from the
         # tail end so the whole row is on the belt at once.
         widths = [tag_width(nm, sl) for nm, sl in items]
-        rest_w = sum(widths) + TAG_GAP * (len(items) - 1)
-        assert REST_X + rest_w <= CR - 4, (label, rest_w)
-        lap = max((X1 - CL) + w / 2 + TIP for w in widths) + 4
+        # running, the tags ride RUN_GAP apart; the lap must still let a tag finish its
+        # quarter turn before it comes round again
+        lap = max(sum(widths) + RUN_GAP * len(items), max((X1 - CL) + w / 2 + TIP for w in widths) + 4)
         gap = (lap - sum(widths)) / len(items)
         assert gap >= TAG_GAP, (label, gap)
         dur = lap / v
         x_rest = REST_X
         x_run = REST_X  # where the tag is at t = 0 when the belt runs
+        full = False
         tags = []
         for ti, ((name, slug), w) in enumerate(zip(items, widths)):
-            assert x_rest + w / 2 < X1, name  # at rest the centre of mass is on the flat run
+            full = full or x_rest + w > X1 - 8
+            # no room at rest: wait out of sight behind the tail clip
+            x_at_rest = CL - w - 40 if full else x_rest
+            assert x_at_rest + w / 2 < X1, name  # at rest the centre of mass is on the flat run
             x_in = CL - w - X1  # entry: right edge on the tail clip (pivot frame)
             x_tip = -w / 2  # centre over the drive roller's top tangent point
             pa = (x_tip - x_in) / lap
@@ -156,7 +172,7 @@ def build() -> None:
                     f".{cls}{{animation:{cls} {dur:.3f}s linear -{phase * dur:.3f}s infinite}}")
             # The pivot frame sits on the drive roller centre. The rest position is the
             # transform attribute, which the CSS animation overrides while it runs.
-            tags.append(f'<g class="{cls}" transform="translate({num(x_rest - X1)} 0)">'
+            tags.append(f'<g class="{cls}" transform="translate({num(x_at_rest - X1)} 0)">'
                         f'{tag(d, name, slug, -(R + LIFT))}</g>')
             x_rest += w + TAG_GAP
             x_run += w + gap
