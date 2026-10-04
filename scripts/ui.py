@@ -421,6 +421,10 @@ def detent_frames(t: float, frm: float, to: float, over: float, prop):
             (t + D, prop(to), None)], t + D
 
 
+def plural(n: int, word: str) -> str:
+    return f"{n} {word}" + ("" if n == 1 else "s")
+
+
 def odometer() -> None:
     W, H = 1200, 232
     with open(os.path.join(HERE, "data", "stats.json"), encoding="utf-8") as f:
@@ -438,11 +442,13 @@ def odometer() -> None:
     models = [("LSTM", 43.9), ("CNN", 72.2), ("BiLSTM", 73.5), ("CNN + BiLSTM", 75.9)]
     # the builds on this page, in card order: in production, live demo, or repository only
     kinds = [c["status"] for c in PROJECTS]
+    rank = {"prod": 0, "demo": 1, "repo": 2, "private": 2}
+    assert set(kinds) <= set(rank), set(kinds) - set(rank)
     n_prod, n_demo = kinds.count("prod"), kinds.count("demo")
     n_live, n_all = n_prod + n_demo, len(kinds)
     d = Doc(W, H, f"{n_live} of {n_all} builds live, thesis accuracy 75.9%, {commits} commits in 52 weeks",
             f"Three counters. {n_live} of the {n_all} builds on this page are live: {n_prod} in production and "
-            f"{n_demo} demos. Thesis accuracy 75.9% for the CNN + BiLSTM hybrid, against BiLSTM 73.5%, "
+            f"{plural(n_demo, 'demo')}. Thesis accuracy 75.9% for the CNN + BiLSTM hybrid, against BiLSTM 73.5%, "
             f"CNN 72.2% and LSTM 43.9%. {commits} commits in the last 52 weeks.")
     d.style(BASE_CSS)
     d.add(rect(0.75, 0.75, W - 1.5, H - 1.5, 22, fill=PANEL, stroke=LINE, stroke_width=1.5))
@@ -532,11 +538,13 @@ def odometer() -> None:
                 if kind == "demo":
                     return rect(xx + 1, yy + 1, sz - 2, sz - 2, 1.6, fill="none", stroke=VOLT, stroke_width=2)
                 return rect(xx + 0.75, yy + 0.75, sz - 1.5, sz - 1.5, 1.6, fill="none", stroke=grad, stroke_width=1.5)
-            order = sorted(kinds, key=["prod", "demo", "repo"].index)
+            order = sorted(kinds, key=rank.get)
             g = "".join(slot(x0 + i * (s + gap), rule_y - s + 1, s, k) for i, k in enumerate(order))
             # the legend reads left to right in the same order as the slots
             ks, lx = 12, x0
-            for kind, text in (("prod", f"{n_prod} in production"), ("demo", f"{n_demo} demos")):
+            for kind, n, text in (("prod", n_prod, f"{n_prod} in production"), ("demo", n_demo, plural(n_demo, "demo"))):
+                if not n:
+                    continue
                 g += slot(lx, ann_y - ks + 1, ks, kind)
                 g += d.text(text, lx + ks + 7, ann_y, 16, MONO, fill=MUTED)
                 lx += ks + 7 + MONO.width(text, 16) + 22
