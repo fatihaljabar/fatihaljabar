@@ -322,7 +322,7 @@ PROJECTS = [
          desc="Scan a receipt in the browser, split it by item or percentage, and every rupiah adds up. A shared bill and its link expire after 24 hours.",
          stack=[("Vue 3", "vuedotjs"), ("TypeScript", "typescript"), ("Hono", "hono"), ("Drizzle", "drizzle"), ("Tesseract.js", None)]),
     dict(slug="nusaride", name="NusaRide", status="demo", href="https://rentcar-demo-blue.vercel.app",
-         desc="Frontend demo for car, Hiace and bus rentals: per-unit availability, a fleet admin, PDF invoices, two languages and two themes.",
+         desc="Front-end demo for car, Hiace and bus rentals: per-unit availability, a fleet admin, PDF invoices, two languages and two themes.",
          stack=[("React 19", "react"), ("React Router", "reactrouter"), ("Tailwind v4", "tailwindcss"), ("jsPDF", None)]),
     dict(slug="vetready", name="VetReady", status="demo", href="https://vetready-demo.vercel.app",
          desc="Vet exam prep with a timed CBT simulation, guided OSCE cases, checkout, and portals for participants and admins.",
