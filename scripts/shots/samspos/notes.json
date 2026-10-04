@@ -1,0 +1,20 @@
+{
+  "route": "/pos (logged in through the demo role picker as Kasir Rian Saputra, Cabang Wiyung)",
+  "alt_route": "/inventory (logged in as Owner Dewi Anggraini, branch filter 'Semua Cabang', tab 'Stok Produk Jadi': per-branch finished-goods stock for Rungkut (Pusat), Wiyung and Darmo, with Aman/Menipis status)",
+  "how_run": "npm ci fails because package-lock.json is out of sync with package.json (missing @emnapi/runtime@1.11.3 and @emnapi/core@1.11.3), so I ran npm install --no-package-lock. The repo's .gitignore is malformed and .next/dev is tracked in git, so running next inside the repo would modify tracked files. The source was therefore copied (without .git/.next) to /home/user/shots-work/samspos/app, then built and served with next build && next start -p 5392 -H 127.0.0.1 (production, no dev indicator). Captured with Playwright Chromium 1194 via /home/user/shots-work/samspos/capture.mjs.",
+  "mocked": false,
+  "mock_summary": "No backend exists and no API calls were mocked. All data comes from the app's own seed (src/lib/mockData.ts): three Surabaya branches (Rungkut Pusat, Wiyung, Darmo), bakery products in IDR (Roti Sobek Pandan Rp 28.000, Croissant Butter Rp 24.000, etc.) and customers such as Agus Prasetyo from Wiyung. The seed draws stock levels and sales with Math.random(), so an init script replaced Math.random with a fixed-seed PRNG. That keeps the stock figures identical across the POS, mobile and inventory captures. The cart was filled through the real UI by clicking product tiles: Roti Sobek Pandan x2, Croissant Butter x2, Roti Keju x3, Brownies Panggang x1, customer Agus Prasetyo. Subtotal is Rp 191.000, plus 10% tax and 5% service, for a total of Rp 219.650. Blocked static hosts were served locally through page.route: Plus Jakarta Sans (variable 200-800, normal + italic) from @fontsource-variable/plus-jakarta-sans, and Flaticon UIcons regular-rounded, solid-rounded and brands from @flaticon/flaticon-uicons.",
+  "issues": [
+    "Stock numbers come from a pinned PRNG, so a real fresh visit shows different (random) stock counts and Menipis badges.",
+    "The app has no product photos. Product tiles are coloured initials blocks (the ProductAvatar component), and that is the production design.",
+    "The Kasir role sees only three sidebar items (Point of Sale, Notifikasi, Pelanggan), so the hero's sidebar is mostly empty below them. This is role-based and correct.",
+    "The POS page is a single-screen layout only 21 px taller than the viewport, so desktop-full.png is 1440x921. For that shot only, the sticky h-screen sidebar was stretched to the document height. A raw fullPage capture leaves a 21 px gap under the sidebar that a scrolling user never sees.",
+    "mobile.png is the full POS page at 390 px (3886 image px, 1943 CSS px), so no crop was needed. The category pill row scrolls horizontally, which is why 'Pastry' is cut at the right edge.",
+    "On the inventory alt screen the sidebar continues below the fold ('Audit Log' is partly visible at the bottom edge). That is the real scrollable sidebar at 900 px height.",
+    "Seed dates are from 2024 (e.g. transfers in Mei 2024, expiry batches 2024-04-28), but none appear on the captured screens.",
+    "globals.css sets font-feature-settings cv02/cv03/cv04/cv11. These are Inter character variants and have no effect on Plus Jakarta Sans. This is harmless and matches production."
+  ],
+  "page_title": "Sam's POS — Sistem Point of Sale Multi Cabang",
+  "accent_hex": "#4F39F6",
+  "background_hex": "#F8FAFC"
+}
