@@ -20,11 +20,14 @@ from svgkit import Doc, num, rect
 from theme import *  # noqa: F403
 
 LOGOS = json.load(open(os.path.join(os.path.dirname(__file__), "data", "logos.json")))
+# Tools with no official mark in Simple Icons get a Lucide glyph (ISC, data/LUCIDE-LICENSE.txt)
+# that says what the tool does: a lock for bcrypt, a card for Midtrans, masks for Playwright.
+_G = json.load(open(os.path.join(os.path.dirname(__file__), "data", "glyphs.json")))
+GLYPH_OF, GLYPHS = _G["tools"], _G["glyphs"]
 
 # Exactly the tools of the old badge wall (README at d0ea1ad), names fixed.
 # The slug is the tool's own Simple Icons mark; None when it has no official mark
-# there (MySQL's mark is a wordmark that turns into a smudge at 22 px, so it is set
-# in type too). Vue Router, Supabase Auth, Google Identity Services and Cloudflare R2
+# there, and those tools take a Lucide glyph instead. Vue Router, Supabase Auth, Google Identity Services and Cloudflare R2
 # are first-party products of the brand whose mark they carry.
 GROUPS = [
     ("Languages", [("TypeScript", "typescript"), ("JavaScript", "javascript"), ("Python", "python"),
@@ -40,7 +43,7 @@ GROUPS = [
                   ("Google Identity", "google"), ("aws4fetch", None), ("Resend", "resend"),
                   ("JWT", "jsonwebtokens"), ("bcrypt", None), ("Supabase Auth", "supabase"), ("Midtrans", None),
                   ("API.co.id", None), ("React Email", None), ("Tesseract.js", None)]),
-    ("Databases and infra", [("PostgreSQL", "postgresql"), ("MySQL", None), ("MariaDB", "mariadb"),
+    ("Databases and infra", [("PostgreSQL", "postgresql"), ("MySQL", "mysql"), ("MariaDB", "mariadb"),
                              ("MongoDB", "mongodb"), ("Supabase", "supabase"), ("Vercel", "vercel"),
                              ("Cloudflare R2", "cloudflare"), ("Hostinger", "hostinger"), ("Netlify", "netlify"),
                              ("Docker", "docker")]),
@@ -115,7 +118,7 @@ def press_css() -> str:
 
 
 def ordered(items):
-    """Tools with a mark first, then the ones set in type; each in the README's order."""
+    """Tools with an official mark first, then the ones with a glyph; each in the README's order."""
     return [t for t in items if t[1]] + [t for t in items if not t[1]]
 
 
@@ -147,6 +150,10 @@ def build() -> None:
     used = sorted({slug for _, items in GROUPS for _, slug in items if slug})
     for slug in used:
         d.defs.append(f'<path id="i-{slug}" d="{LOGOS[slug]["path"]}"/>')
+    missing = [n for _, items in GROUPS for n, slug in items if not slug and n not in GLYPH_OF]
+    assert not missing, f"no mark or glyph for {missing}"
+    for g in sorted({GLYPH_OF[n] for _, items in GROUPS for n, slug in items if not slug}):
+        d.defs.append(f'<g id="g-{g}">{GLYPHS[g]}</g>')
 
     def hairline(y: float) -> str:
         return f'<path d="M{PAD_X} {num(y)}H{W - PAD_X}" stroke="{LINE}" stroke-width="1"/>'
@@ -170,7 +177,11 @@ def build() -> None:
         if slug:
             cap += (f'<use xlink:href="#i-{slug}" fill="{TEXT}" transform="translate({num(lx)} '
                     f'{num(y + (CAP_H - ICON) / 2)}) scale({k_icon:.4f})"/>')
-            lx += ICON + ICON_GAP
+        else:  # a line glyph on the same 24 grid, stroked like Lucide draws it
+            cap += (f'<use xlink:href="#g-{GLYPH_OF[name]}" fill="none" stroke="{TEXT}" stroke-width="2" '
+                    f'stroke-linecap="round" stroke-linejoin="round" transform="translate({num(lx)} '
+                    f'{num(y + (CAP_H - ICON) / 2)}) scale({k_icon:.4f})"/>')
+        lx += ICON + ICON_GAP
         assert lx + SEMI.width(name, LABEL) <= x + CELL - PAD_R, name
         cap += d.text(name, lx, base_line, LABEL, SEMI, fill=TEXT)
         skirt = rect(x, y + SKIRT, CELL, CAP_H, 9, fill=BASE, stroke=BASE_EDGE, stroke_width=1)
@@ -182,9 +193,9 @@ def build() -> None:
 
     y_rule = grid_bottom + GROUP_GAP
     d.add(hairline(y_rule + 0.5))
-    d.add(d.text(f"{n_tools} tools. Logos are the official marks from Simple Icons; a tool without one is set in type.",
+    d.add(d.text(f"{n_tools} tools. Filled logos are official marks from Simple Icons; line icons are Lucide glyphs for tools without one.",
                  PAD_X, y_rule + 1 + GROUP_GAP + 13, 16, BODY, fill=MUTED))
 
     save("toolbox.svg", d)
     print(f"toolbox: {n_tools} tools, {len(used)} distinct marks, "
-          f"{sum(1 for _, it in GROUPS for _, s in it if not s)} set in type")
+          f"{sum(1 for _, it in GROUPS for _, s in it if not s)} with a Lucide glyph")
