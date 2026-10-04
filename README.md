@@ -22,13 +22,13 @@
   <a href="#activity"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/stats.svg"><source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg"><img src="assets/stats.svg" width="100%" alt="11 of the 12 builds on this page are live: 3 in production and 8 demos. Thesis model accuracy 75.9 percent. 594 commits in the last 52 weeks."></picture></a>
 </p>
 
-I'm Fatih Al Jabar. I build web applications with a front-end bias, and I studied Computer Science at Universitas 17 Agustus 1945 Surabaya, graduating with a **3.63/4.00** GPA.
+I'm Fatih Al Jabar, a **Front-End & Full-Stack Developer** in Indonesia (UTC+7), and I take on client and freelance work. You send me your spec, and I turn it into **a demo you can click through before any backend exists**. You try the real flows and ask for changes early. Once you approve it, I build the production version from it.
 
-Most days I work in **React, Next.js and TypeScript**, with some Vue when a project calls for it. Three of my apps run in production: a job-application tracker at trackinglamaran.site, a bill splitter with in-browser OCR at splitbills.site, and the CMS behind fatihaljabar.com. I've also built an e-commerce platform with live payments and a POS system for a bakery.
+A Minecraft and Roblox asset marketplace, a travel agency suite, a vet exam platform and a sports event console all started that way. The marketplace demo has been approved, and I'm building it for production now.
 
-Lately most of my time goes into client work. I take a spec document and turn it into a demo the client can click through before any backend exists. A Minecraft and Roblox asset marketplace, a travel agency suite, a vet exam platform and a sports event console all started that way, and the marketplace is now being built for production.
+Most days I work in **React, Next.js and TypeScript**, with Vue when a project calls for it and Node.js, PostgreSQL and Supabase behind them. Three of my own apps run in production: a job-application tracker at [trackinglamaran.site](https://trackinglamaran.site), a bill splitter with in-browser receipt OCR at [splitbills.site](https://splitbills.site), and the site and CMS behind [fatihaljabar.com](https://fatihaljabar.com). I've also built an e-commerce platform with live payments and a POS for a bakery.
 
-For my thesis I trained CNN, LSTM, BiLSTM and a CNN + BiLSTM hybrid with attention to read sentiment in Indonesian tweets about electric vehicles. The hybrid came out on top with **75.9% accuracy (macro F1 0.76)**.
+If you have a spec waiting for its first version, or a role to fill, email me at [fatihaljabar@gmail.com](mailto:fatihaljabar@gmail.com) and tell me what you're building. I will reply with how I would approach it.
 
 <br>
 
@@ -114,16 +114,26 @@ I compared four architectures (CNN, LSTM, BiLSTM, and a CNN + BiLSTM hybrid with
 <a name="certifications"></a>
 <h3><a href="#certifications"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/section-certs.svg"><source media="(prefers-color-scheme: light)" srcset="assets/section-certs-light.svg"><img src="assets/section-certs.svg" width="100%" alt="Certifications"></picture></a></h3>
 
-All issued by **Dicoding Indonesia**.
+<p align="center">
+  <a href="#certifications"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/certs.svg"><source media="(prefers-color-scheme: light)" srcset="assets/certs-light.svg"><img src="assets/certs.svg" width="100%" alt="Six Dicoding Indonesia certificates hang from binder clips on two wires, filed in course order. Front-end path: JavaScript Programming Basics, Front-End Web Development for Beginners, Front-End Web Development Fundamentals, Becoming an Expert Front-End Web Developer. Then Back-End Fundamentals with JavaScript and Building a Career as a Software Developer."></picture></a>
+</p>
 
-| Course | What it covers |
-|---|---|
-| <a href="https://www.dicoding.com/certificates/N9ZOY1Y7DPG5">Becoming an Expert Front-End Web Developer</a> | PWA, accessibility, automation testing, CI/CD |
-| <a href="https://www.dicoding.com/certificates/EYX4J058OZDL">Front-End Web Development Fundamentals</a> | Web Components, module bundlers, async JS |
-| <a href="https://www.dicoding.com/certificates/EYX4J9RROZDL">Front-End Web Development for Beginners</a> | DOM manipulation, events, web storage |
-| <a href="https://www.dicoding.com/certificates/2VX349OGVZYQ">Back-End Fundamentals with JavaScript</a> | RESTful APIs, Node.js, Hapi, AWS EC2 |
-| <a href="https://www.dicoding.com/certificates/NVP741O0WPR0">JavaScript Programming Basics</a> | OOP, functional programming, async |
-| <a href="https://www.dicoding.com/certificates/6RPNYN60QZ2M">Building a Career as a Software Developer</a> | Career paths, roles and the day-to-day of software work |
+All six are issued by **Dicoding Indonesia** and can be checked on Dicoding: <a href="https://www.dicoding.com/certificates/NVP741O0WPR0">JavaScript Programming Basics</a>, <a href="https://www.dicoding.com/certificates/EYX4J9RROZDL">Front-End Web Development for Beginners</a>, <a href="https://www.dicoding.com/certificates/EYX4J058OZDL">Front-End Web Development Fundamentals</a>, <a href="https://www.dicoding.com/certificates/N9ZOY1Y7DPG5">Becoming an Expert Front-End Web Developer</a>, <a href="https://www.dicoding.com/certificates/2VX349OGVZYQ">Back-End Fundamentals with JavaScript</a> and <a href="https://www.dicoding.com/certificates/6RPNYN60QZ2M">Building a Career as a Software Developer</a>.
+
+<details>
+<summary><b>The certificates as text</b></summary>
+<br>
+
+| # | Course | What it covers | Credential |
+|---|---|---|---|
+| 01 | JavaScript Programming Basics | OOP, functional programming, async | <a href="https://www.dicoding.com/certificates/NVP741O0WPR0"><code>NVP741O0WPR0</code></a> |
+| 02 | Front-End Web Development for Beginners | DOM manipulation, events, web storage | <a href="https://www.dicoding.com/certificates/EYX4J9RROZDL"><code>EYX4J9RROZDL</code></a> |
+| 03 | Front-End Web Development Fundamentals | Web Components, module bundlers, async JS | <a href="https://www.dicoding.com/certificates/EYX4J058OZDL"><code>EYX4J058OZDL</code></a> |
+| 04 | Becoming an Expert Front-End Web Developer | PWA, accessibility, automation testing, CI/CD | <a href="https://www.dicoding.com/certificates/N9ZOY1Y7DPG5"><code>N9ZOY1Y7DPG5</code></a> |
+| 05 | Back-End Fundamentals with JavaScript | RESTful APIs, Node.js, Hapi, AWS EC2 | <a href="https://www.dicoding.com/certificates/2VX349OGVZYQ"><code>2VX349OGVZYQ</code></a> |
+| 06 | Building a Career as a Software Developer | Career paths, roles and the day-to-day of software work | <a href="https://www.dicoding.com/certificates/6RPNYN60QZ2M"><code>6RPNYN60QZ2M</code></a> |
+
+</details>
 
 <br>
 
