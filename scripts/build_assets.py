@@ -27,7 +27,7 @@ def part(fn):
 @part
 def hero():
     import hero as h
-    save("hero.svg", h.build())
+    h.build()  # saves itself; the machine has a single file for both themes
 
 
 @part
