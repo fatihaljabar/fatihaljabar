@@ -426,9 +426,9 @@ def simplify(keys, idx):
 
 
 def build() -> Doc:
-    d = Doc(W, H, "Fatih Al Jabar: front-end developer, full-stack when it counts",
+    d = Doc(W, H, "Fatih Al Jabar: Front-End & Full-Stack Developer",
             "A pen plotter prints a drafting sheet: 'Interfaces that feel fast and obvious, with a backend behind them "
-            "that stays out of the way', a title block (Fatih Al Jabar, front-end and full-stack, Indonesia, UTC+7, "
+            "that stays out of the way', a title block (Fatih Al Jabar, Front-End & Full-Stack Developer, Indonesia, UTC+7, "
             "open to remote work) and notes (React, Next.js and TypeScript every day, Vue when the job calls for it; "
             "now building the Blockwave Studios marketplace for production). It then plots and hatches the name "
             "Fatih with a measured dimension line, rings 'fast and obvious' with a coral revision cloud, adds a lime "
@@ -447,8 +447,10 @@ def build() -> Doc:
     dot_c = (ix1 + 22 + r_dot, nbase - r_dot - 1.5)
 
     # title block: upper right quadrant, bottom edge on the name baseline
-    tb_x0, tb_x1, rh = 784, RIGHT, 28
-    rows_tb = [("DRAWN BY", "Fatih Al Jabar"), ("ROLE", "Front-end, full-stack"),
+    # each field carries its caption in the top left corner and the value below it, so a
+    # value can use the full width of the block
+    tb_x0, tb_x1, rh = 784, RIGHT, 46
+    rows_tb = [("DRAWN BY", "Fatih Al Jabar"), ("ROLE", "Front-End & Full-Stack Developer"),
                ("LOCATION", "Indonesia, UTC+7"), ("STATUS", "Open to remote work")]
     tb_y0 = nbase - rh * len(rows_tb)
 
@@ -711,15 +713,15 @@ def build() -> Doc:
     printed(d.text(width_label, (ix0 + ix1) / 2, dy + 5.8, 16, MONOB, fill=PEN, anchor="middle"), dy + 6)
 
     # title block, row by row
-    key_w = 84
     for i, (k, v) in enumerate(rows_tb):
         ry0 = tb_y0 + rh * i
-        lines = f"M{tb_x0} {ry0}H{tb_x1}M{tb_x0} {ry0}V{ry0 + rh}M{tb_x0 + key_w} {ry0}V{ry0 + rh}M{tb_x1} {ry0}V{ry0 + rh}"
+        assert SEMI.width(v, 16) <= tb_x1 - tb_x0 - 20, v
+        lines = f"M{tb_x0} {ry0}H{tb_x1}M{tb_x0} {ry0}V{ry0 + rh}M{tb_x1} {ry0}V{ry0 + rh}"
         if i == len(rows_tb) - 1:
             lines += f"M{tb_x0} {ry0 + rh}H{tb_x1}"
         svg = (f'<path d="{lines}" fill="none" stroke="{PEN}" stroke-width="1.2" stroke-linecap="square"/>'
-               + d.text(k, tb_x0 + 10, ry0 + 18.5, 12, MONOB, fill=PENSOFT, ls=0.6)
-               + d.text(v, tb_x0 + key_w + 11, ry0 + 19.5, 16, SEMI, fill=PEN))
+               + d.text(k, tb_x0 + 10, ry0 + 15.5, 12, MONOB, fill=PENSOFT, ls=0.6)
+               + d.text(v, tb_x0 + 10, ry0 + 37, 16, SEMI, fill=PEN))
         printed(svg, ry0 + rh)
 
     printed(d.text(pre, pre_x, y1, t1_size, SEMI, fill=PEN) + d.text(hi_s, hi_x, y1, t1_size, SEMI, fill=PEN), y1 + 7)
