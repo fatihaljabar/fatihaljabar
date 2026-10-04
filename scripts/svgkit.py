@@ -18,6 +18,10 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 FONT_DIR = os.path.join(HERE, "fonts")
 
 
+# Middle dots, bullets, en and em dashes read as AI filler on this page; the build refuses them.
+BANNED = {"\u00b7", "\u2022", "\u2013", "\u2014"}
+
+
 def num(v: float) -> str:
     """Compact number formatting for SVG attributes."""
     r = round(v, 2)
@@ -159,6 +163,9 @@ class Doc:
     ) -> str:
         """Outline text. With per_char, every glyph gets its own animatable group
         with class `per_char` and a staggered animation-delay."""
+        banned = BANNED.intersection(s)
+        if banned:
+            raise ValueError(f"banned glyph {sorted(banned)} in text {s!r}: use words or commas instead")
         glyphs, width = font.layout(s, size, ls)
         if anchor == "middle":
             x -= width / 2

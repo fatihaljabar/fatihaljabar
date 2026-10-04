@@ -3,6 +3,7 @@
     pip install fonttools brotli
     python scripts/build_assets.py            # everything
     python scripts/build_assets.py hero stats # only some parts
+    THEME=light python scripts/build_assets.py # the -light twins
 
 Output goes to assets/. All motion is CSS (plus SMIL for two paths) inside
 the SVG, so it plays in GitHub's image sandbox with no scripts and no
@@ -45,6 +46,12 @@ def ui():
 def stack():
     import stack as s
     s.build()
+
+
+@part
+def toolbox():
+    import toolbox as t
+    t.build()
 
 
 @part

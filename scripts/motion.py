@@ -80,3 +80,13 @@ def spring_anim(cls: str, name: str, s: Spring, delay: float = 0.0, extra: str =
 def spring_tf(s: Spring) -> str:
     """Per-keyframe timing declarations (fallback first, then linear())."""
     return f"animation-timing-function:{FALLBACK.get(s, 'ease-out')};animation-timing-function:{linear_easing(s)}"
+
+
+def detent_keyframes(name: str, prop, frm: float, to: float, overshoot_px: float, settle: Spring = SETTLE) -> str:
+    """Move from `frm` to `to` and stop like a mechanism hitting a detent: a critically
+    damped approach, a fixed overshoot in pixels (never a percentage of the travel),
+    and a short return. `prop(v)` renders the CSS declaration for value v."""
+    sign = 1 if to >= frm else -1
+    return (f"@keyframes {name}{{0%{{{prop(frm)};{spring_tf(settle)}}}"
+            f"82%{{{prop(to + sign * overshoot_px)};animation-timing-function:cubic-bezier(.3,0,.3,1)}}"
+            f"92%{{{prop(to - sign * overshoot_px * 0.2)}}}100%{{{prop(to)}}}}}")
