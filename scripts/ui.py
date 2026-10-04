@@ -21,6 +21,7 @@ import random
 from fontTools.pens.basePen import BasePen
 from fontTools.pens.boundsPen import BoundsPen
 
+from cards import PROJECTS
 from motion import SETTLE, duration, spring_tf
 from svgkit import Doc, Font, num, rect
 from theme import *  # noqa: F403
@@ -435,15 +436,19 @@ def odometer() -> None:
         return f"{months[int(m) - 1]} {y}"
 
     models = [("LSTM", 43.9), ("CNN", 72.2), ("BiLSTM", 73.5), ("CNN + BiLSTM", 75.9)]
-    d = Doc(W, H, f"GPA 3.63 of 4.00, thesis accuracy 75.9%, 3 of 12 builds in production, {commits} commits in 52 weeks",
-            f"Four counters. GPA 3.63 on a 0 to 4.00 scale. Thesis accuracy 75.9% for the CNN + BiLSTM hybrid, "
-            f"against BiLSTM 73.5%, CNN 72.2% and LSTM 43.9%. 3 of the 12 builds on this page are in production. "
-            f"{commits} commits in the last 52 weeks.")
+    # the builds on this page, in card order: in production, live demo, or repository only
+    kinds = [c["status"] for c in PROJECTS]
+    n_prod, n_demo = kinds.count("prod"), kinds.count("demo")
+    n_live, n_all = n_prod + n_demo, len(kinds)
+    d = Doc(W, H, f"{n_live} of {n_all} builds live, thesis accuracy 75.9%, {commits} commits in 52 weeks",
+            f"Three counters. {n_live} of the {n_all} builds on this page are live: {n_prod} in production and "
+            f"{n_demo} demos. Thesis accuracy 75.9% for the CNN + BiLSTM hybrid, against BiLSTM 73.5%, "
+            f"CNN 72.2% and LSTM 43.9%. {commits} commits in the last 52 weeks.")
     d.style(BASE_CSS)
     d.add(rect(0.75, 0.75, W - 1.5, H - 1.5, 22, fill=PANEL, stroke=LINE, stroke_width=1.5))
 
-    widths = [292, 316, 292, 300]  # the accuracy tile carries the longest label and the densest scale
-    lefts = [sum(widths[:i]) for i in range(4)]
+    widths = [400, 400, 400]
+    lefts = [sum(widths[:i]) for i in range(len(widths))]
     pad = 36
     size = 72
     L = 86  # drum row pitch
@@ -455,9 +460,8 @@ def odometer() -> None:
     grad = DIM  # graduations and empty slots: strokes, never text
 
     tiles = [
-        ("3.63", "/ 4.00", "GPA, computer science"),
+        (str(n_live), f"of {n_all}", "Builds live"),
         ("75.9", "%", "Thesis accuracy, CNN + BiLSTM"),
-        ("3", "of 12", "Builds in production"),
         (str(commits), "", "Commits, last 52 weeks"),
     ]
     css = []
@@ -488,7 +492,11 @@ def odometer() -> None:
                 assert eb < ODO_PERIOD - 0.05, eb
                 fb = [(0, ty(0), None)] + fb + [(ODO_PERIOD, ty(-10 * L), None)]
                 css.append(keyframes(f"{name}b", ODO_PERIOD, fb) + f".{name}b{{animation:{name}b {ODO_PERIOD}s linear infinite}}")
-                drums.append(f'<g class="{name}a"><g class="{name}b">{rows}</g></g>')
+                # every wheel sits behind its own window, so a wide 0 rolling past a narrow 1
+                # never paints over the wheel next to it
+                d.defs.append(f'<clipPath id="{name}w"><rect x="{num(x - 1)}" y="{num(base - cap - 8)}" '
+                              f'width="{num(w + 2)}" height="{num(cap + 16)}"/></clipPath>')
+                drums.append(f'<g clip-path="url(#{name}w)"><g class="{name}a"><g class="{name}b">{rows}</g></g></g>')
                 di += 1
             else:
                 drums.append(d.text(ch, x, base, size, DISP, fill=TEXT))
@@ -514,13 +522,25 @@ def odometer() -> None:
         def mark(x, h, color, w):
             return f'<path d="M{num(x)} {rule_y - 1}V{num(rule_y - h)}" stroke="{color}" stroke-width="{w}"/>'
 
-        if ci == 0:  # GPA on a 0 to 4.00 rule, graduated every 1.00
-            sx = lambda v: x0 + v / 4 * cw  # noqa: E731
-            g = rule() + grads([sx(i) for i in range(5)]) + mark(sx(3.63), 16, VOLT, 4)
-            for i in range(5):
-                anchor = "start" if i == 0 else "end" if i == 4 else "middle"
-                g += d.text(str(i), sx(i) + (-1 if i == 0 else 1 if i == 4 else 0), ann_y, 16, MONO, fill=MUTED,
-                            anchor=anchor)
+        if ci == 0:  # one slot per build: solid in production, ringed live demo, empty repository only
+            gap = 6
+            s = min(18, (cw - gap * (n_all - 1)) / n_all)
+
+            def slot(xx, yy, sz, kind):
+                if kind == "prod":
+                    return rect(xx, yy, sz, sz, 2, fill=VOLT)
+                if kind == "demo":
+                    return rect(xx + 1, yy + 1, sz - 2, sz - 2, 1.6, fill="none", stroke=VOLT, stroke_width=2)
+                return rect(xx + 0.75, yy + 0.75, sz - 1.5, sz - 1.5, 1.6, fill="none", stroke=grad, stroke_width=1.5)
+            order = sorted(kinds, key=["prod", "demo", "repo"].index)
+            g = "".join(slot(x0 + i * (s + gap), rule_y - s + 1, s, k) for i, k in enumerate(order))
+            # the legend reads left to right in the same order as the slots
+            ks, lx = 12, x0
+            for kind, text in (("prod", f"{n_prod} in production"), ("demo", f"{n_demo} demos")):
+                g += slot(lx, ann_y - ks + 1, ks, kind)
+                g += d.text(text, lx + ks + 7, ann_y, 16, MONO, fill=MUTED)
+                lx += ks + 7 + MONO.width(text, 16) + 22
+            assert lx - 22 <= x0 + cw, lx
             d.add(g)
         elif ci == 1:  # accuracy on 40 to 80%, one mark per model, the hybrid lit
             sx = lambda v: x0 + (v - 40) / 40 * cw  # noqa: E731
@@ -533,21 +553,6 @@ def odometer() -> None:
             g += d.text("40", x0 - 1, ann_y, 16, MONO, fill=MUTED)
             g += d.text("60", sx(60), ann_y, 16, MONO, fill=MUTED, anchor="middle")
             g += d.text("80%", x0 + cw + 1, ann_y, 16, MONO, fill=MUTED, anchor="end")
-            d.add(g)
-        elif ci == 2:  # 3 of 12 builds in production
-            n, live = 12, 3
-            gap = 5
-            s = (cw - gap * (n - 1)) / n
-            g = ""
-            for i in range(n):
-                xx = x0 + i * (s + gap)
-                if i < live:
-                    g += rect(xx, rule_y - s + 1, s, s, 2, fill=VOLT)
-                else:
-                    g += rect(xx + 0.75, rule_y - s + 1.75, s - 1.5, s - 1.5, 1.6, fill="none", stroke=grad,
-                              stroke_width=1.5)
-            g += d.text("1", x0 + s / 2, ann_y, 16, MONO, fill=MUTED, anchor="middle")
-            g += d.text("12", x0 + cw - s / 2, ann_y, 16, MONO, fill=MUTED, anchor="middle")
             d.add(g)
         else:  # commits per week, 52 columns standing on the rule
             n = len(weeks)
