@@ -22,6 +22,7 @@ DEST = os.path.join(HERE, "shots")
 # Pages stacked top to bottom when one screen tells the story better than the landing page.
 COMPOSE = {
     "splitbill": ["desktop-alt.png", "desktop-full.png"],
+    "ottodot": ["desktop-full.png", "booking.png", "desktop-alt.png"],
 }
 
 
