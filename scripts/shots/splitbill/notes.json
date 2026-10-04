@@ -1,0 +1,17 @@
+{
+  "route": "/bill (Item tab)",
+  "alt_route": "/results",
+  "how_run": "npm ci in /home/user/splitbill, then `npx vite --port 5191 --strictPort --host 127.0.0.1` (Vite dev client only; Hono/MySQL server not started). Playwright (Chromium 1194, locale id-ID, timezone Asia/Jakarta, clock set to 3 Oct 2026 21:13 WIB) seeds the bill as the app's own localStorage draft (splitbill_draft) and opens /bill, clicks the Item tab, then clicks 'Hitung Split' to reach /results through the real UI. Scripts: /home/user/shots-work/splitbill/shoot.mjs + bill.mjs.",
+  "mocked": true,
+  "mock_summary": "page.route on /api/bills*: POST /api/bills returns {shortCode:'Lq7vR2xa', expiresAt:createdAt+24h} (201) as in server/bills.ts; GET /api/bills/:code returns a PublicBillResponse {mode:'public', bill, calc} where calc is computed by the repo's own shared/calculate.ts and Dinda is marked paid (the ResultsPage 5 s poll picks this up, showing cross-device payment status); POST /:code/pay returns ok. Bill data: 'Makan Malam Tim Produk' at fictional Sundanese restaurant 'Saung Kuring, Jl. Dago 112, Bandung', 4 people (Raka payer, Dinda, Bayu, Salsa), 8 items in IDR split by item (e.g. Gurame Bakar Kecap Rp125.000 shared by 3 = Rp41.667 each), PB1 tax 10% + service 5%, receipt total Rp418.600 matching the calculation; per-person totals Rp119.792 + Rp86.825 + Rp120.941 + Rp91.042 = Rp418.600 exactly (1-rupiah drift absorbed by the app's own rounding fix). Bank account BCA 4380712956 a/n Raka Pratama (fictional). No OCR was run.",
+  "issues": [
+    "The bill page is short at desktop (947 px of content), so desktop-full.png is nearly the same as desktop-hero.png; the longer, richer page is /results (about 1353 px).",
+    "Full-page shots grow the viewport to the content height rather than using Playwright fullPage stitching, so the fixed 'Total Keseluruhan / Hitung Split' bar sits at the true bottom, as on a tall screen.",
+    "Bank account number on /results uses the system monospace font (font-mono in the source); that is the app's own design, not a missing webfont.",
+    "Results-page confetti was allowed to finish (7 s wait) before capture; no canvas remains in the shot."
+  ],
+  "page_title": "SplitBills • Bagi Tagihan Gratis & Scan Struk",
+  "accent_hex": "#55D1A2",
+  "ui_primary_hex": "#171717",
+  "background_hex": "#FAFAF9"
+}

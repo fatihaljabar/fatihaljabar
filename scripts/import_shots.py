@@ -19,9 +19,25 @@ from PIL import Image
 HERE = os.path.dirname(os.path.abspath(__file__))
 DEST = os.path.join(HERE, "shots")
 
+# Pages stacked top to bottom when one screen tells the story better than the landing page.
+COMPOSE = {
+    "splitbill": ["desktop-alt.png", "desktop-full.png"],
+}
 
-def save_webp(src: str, dst: str, width: int, max_h: int) -> None:
-    im = Image.open(src).convert("RGB")
+
+def stacked(paths: list[str]) -> Image.Image:
+    ims = [Image.open(p).convert("RGB") for p in paths]
+    w = ims[0].width
+    out = Image.new("RGB", (w, sum(i.height for i in ims)), "white")
+    y = 0
+    for im in ims:
+        out.paste(im, (0, y))
+        y += im.height
+    return out
+
+
+def save_webp(src, dst: str, width: int, max_h: int) -> None:
+    im = src if isinstance(src, Image.Image) else Image.open(src).convert("RGB")
     if im.height * 1440 / im.width > max_h:
         im = im.crop((0, 0, im.width, round(max_h * im.width / 1440)))
     h = round(im.height * width / im.width)
@@ -35,7 +51,9 @@ def main(raw: str) -> None:
             continue
         out = os.path.join(DEST, slug)
         os.makedirs(out, exist_ok=True)
-        save_webp(os.path.join(src, "desktop-full.png"), os.path.join(out, "desktop.webp"), 678, 3600)
+        desktop = (stacked([os.path.join(src, f) for f in COMPOSE[slug]]) if slug in COMPOSE
+                   else os.path.join(src, "desktop-full.png"))
+        save_webp(desktop, os.path.join(out, "desktop.webp"), 678, 3600)
         if os.path.isfile(os.path.join(src, "mobile.png")):
             save_webp(os.path.join(src, "mobile.png"), os.path.join(out, "mobile.webp"), 248, 99999)
         if os.path.isfile(os.path.join(src, "notes.json")):
