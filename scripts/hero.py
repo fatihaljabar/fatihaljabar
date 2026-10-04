@@ -429,7 +429,7 @@ def build() -> Doc:
     d = Doc(W, H, "Fatih Al Jabar: Front-End & Full-Stack Developer",
             "A pen plotter prints a drafting sheet: 'Interfaces that feel fast and obvious, with a backend behind them "
             "that stays out of the way', a title block (Fatih Al Jabar, Front-End & Full-Stack Developer, Indonesia, UTC+7, "
-            "open to remote work) and notes (React, Next.js and TypeScript every day, Vue when the job calls for it; "
+            "open to remote work) and notes (main stack React, Next.js and TypeScript, Vue when a project calls for it; "
             "now building the Blockwave Studios marketplace for production). It then plots and hatches the name "
             "Fatih with a measured dimension line, rings 'fast and obvious' with a coral revision cloud, adds a lime "
             "full stop and parks.")
@@ -470,7 +470,7 @@ def build() -> Doc:
     y2 = cy1 + bulge + 12 + 17
     l2_x = LEFT - ink_box(BODY, "w", t2_size)[0]
 
-    notes = ["React, Next.js and TypeScript every day. Vue when the job calls for it.",
+    notes = ["Main stack: React, Next.js and TypeScript. Vue when a project calls for it.",
              "Now building the Blockwave Studios marketplace for production."]
     n_base = [492, 518]
 
@@ -707,6 +707,7 @@ def build() -> Doc:
         d.add(f'<g class="{cls}">{svg}</g>')
 
     hdr = 74
+    assert tb_y0 >= hdr + 24, tb_y0  # the title block stays clear of the sheet header
     printed(d.text("fatihaljabar / README.md", LEFT - ink_box(MONO, "f", 16)[0], hdr, 16, MONO, fill=PENSOFT)
             + d.text("Sheet 1 of 1   Scale 1:1   Units px", RIGHT, hdr, 16, MONO, fill=PENSOFT, anchor="end"), hdr + 4)
 
