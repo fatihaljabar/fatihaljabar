@@ -66,6 +66,12 @@ def thesis():
     t.build()
 
 
+@part
+def certs():
+    import certs as c
+    c.build()
+
+
 def main() -> None:
     names = sys.argv[1:] or list(PARTS)
     for n in names:
