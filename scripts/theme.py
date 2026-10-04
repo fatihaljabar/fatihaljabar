@@ -11,12 +11,12 @@ OUT = os.path.join(ROOT, "assets")
 
 DISP = Font("a", "bricolage-grotesque-latin-800-normal.woff2")
 SEMI = Font("b", "bricolage-grotesque-latin-600-normal.woff2")
-BODY = Font("c", "bricolage-grotesque-latin-400-normal.woff2")
+BODY = Font("c", "bricolage-grotesque-latin-500-normal.woff2")
 MONO = Font("m", "jetbrains-mono-latin-500-normal.woff2")
 MONOB = Font("n", "jetbrains-mono-latin-700-normal.woff2")
-SERIF = Font("s", "instrument-serif-latin-400-italic.woff2")
 
 # Palette: warm ink canvas, one loud volt accent, coral and sky as supporting signals.
+# PAPER is the drafting sheet the plotter draws on; GRAPH is its printed grid.
 BG = "#0B0C0E"
 PANEL = "#111317"
 PANEL2 = "#171A1F"
@@ -29,12 +29,15 @@ VOLT = "#C9F31D"
 CORAL = "#FF6B3D"
 SKY = "#7CC4FF"
 INK = "#0B0C0E"
+PAPER = "#ECE8DE"
+GRAPH = "#DCD6C8"
+GRAPH2 = "#CFC8B8"
+PEN = "#17191D"
+PENSOFT = "#5A5D63"
 
-SPRING = "cubic-bezier(.34,1.56,.64,1)"
 OUTQ = "cubic-bezier(.16,1,.3,1)"
 INOUT = "cubic-bezier(.65,0,.35,1)"
 
-CURSOR_PATH = "M0 0 L0 23 L6.2 17.4 L10.6 27 L14.6 25.3 L10.3 15.8 L18 15.8 Z"
 
 BASE_CSS = """
 .fb{transform-box:fill-box;transform-origin:center}
@@ -42,21 +45,6 @@ BASE_CSS = """
 """
 
 
-def dots_pattern(pid: str = "dots", gap: int = 24, color: str = DOT, r: float = 1.1) -> str:
-    return (
-        f'<pattern id="{pid}" width="{gap}" height="{gap}" patternUnits="userSpaceOnUse">'
-        f'<circle cx="{gap/2}" cy="{gap/2}" r="{r}" fill="{color}"/></pattern>'
-    )
-
-
-def cursor(doc: Doc, color: str, label: str, label_color: str = INK) -> str:
-    """A multiplayer cursor with a name tag, drawn at the origin."""
-    tw = MONOB.width(label, 13)
-    return (
-        f'<path d="{CURSOR_PATH}" fill="{color}" stroke="{INK}" stroke-width="1.6" stroke-linejoin="round"/>'
-        + rect(15, 26, tw + 18, 24, 7, fill=color)
-        + doc.text(label, 24, 42.5, 13, MONOB, fill=label_color)
-    )
 
 
 def arrow_ne(x: float, y: float, s: float, color: str, w: float = 2.2) -> str:
@@ -75,18 +63,6 @@ def arrow_right(x: float, y: float, s: float, color: str, w: float = 2.2) -> str
         f'stroke-width="{w}" stroke-linecap="round" stroke-linejoin="round"/>'
     )
 
-
-def pill(doc: Doc, x, y, label, font=MONO, size=14, fg=TEXT, bg="none", stroke=LINE, padx=14, h=32, cls=None, style=None, dot=None):
-    tw = font.width(label, size)
-    extra = 16 if dot else 0
-    w = tw + padx * 2 + extra
-    attrs = f' class="{cls}"' if cls else ""
-    attrs += f' style="{style}"' if style else ""
-    out = f"<g{attrs}>" + rect(x, y, w, h, h / 2, fill=bg, stroke=stroke, stroke_width=1.2)
-    if dot:
-        out += f'<circle cx="{num(x+padx+4)}" cy="{num(y+h/2)}" r="4" fill="{dot}"/>'
-    out += doc.text(label, x + padx + extra, y + h / 2 + size * 0.36, size, font, fill=fg) + "</g>"
-    return out, w
 
 
 def save(name: str, doc: Doc) -> None:

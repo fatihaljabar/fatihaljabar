@@ -1,45 +1,49 @@
 <a name="top"></a>
 
 <p align="center">
-  <img src="assets/hero.svg" width="100%" alt="Hi, I'm Fatih. Interfaces that feel fast and obvious, with a backend behind them that stays out of the way. 3 apps live in production, 75% thesis accuracy, GPA 3.63.">
+  <img src="assets/hero.svg" width="100%" alt="A pen plotter draws the name Fatih on a drafting sheet. Interfaces that feel fast and obvious, with a backend behind them that stays out of the way. Front-end and full-stack developer, based in Indonesia, open to remote work.">
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/fatihaljabar"><img src="assets/btn-linkedin.svg" height="44" alt="LinkedIn"></a>
-  <a href="mailto:fatihaljabar@gmail.com"><img src="assets/btn-email.svg" height="44" alt="Email"></a>
-  <a href="https://www.instagram.com/fatihaljabar"><img src="assets/btn-instagram.svg" height="44" alt="Instagram"></a>
+  <a href="https://www.linkedin.com/in/fatihaljabar"><img src="assets/btn-linkedin.svg" height="48" alt="LinkedIn"></a>
+  <a href="mailto:fatihaljabar@gmail.com"><img src="assets/btn-email.svg" height="48" alt="Email"></a>
+  <a href="https://www.instagram.com/fatihaljabar"><img src="assets/btn-instagram.svg" height="48" alt="Instagram"></a>
 </p>
 
 <p align="center">
-  <a href="#projects"><img src="assets/btn-nav-work.svg" height="40" alt="01 Projects"></a>
-  <a href="#stack"><img src="assets/btn-nav-stack.svg" height="40" alt="02 Stack"></a>
-  <a href="#thesis"><img src="assets/btn-nav-thesis.svg" height="40" alt="03 Thesis"></a>
-  <a href="#certifications"><img src="assets/btn-nav-certs.svg" height="40" alt="04 Certifications"></a>
-  <a href="#stats"><img src="assets/btn-nav-stats.svg" height="40" alt="05 Stats"></a>
+  <a href="#projects"><img src="assets/btn-nav-work.svg" height="44" alt="01 Projects"></a>
+  <a href="#stack"><img src="assets/btn-nav-stack.svg" height="44" alt="02 Stack"></a>
+  <a href="#thesis"><img src="assets/btn-nav-thesis.svg" height="44" alt="03 Thesis"></a>
+  <a href="#certifications"><img src="assets/btn-nav-certs.svg" height="44" alt="04 Certifications"></a>
+  <a href="#activity"><img src="assets/btn-nav-stats.svg" height="44" alt="05 Activity"></a>
 </p>
 
 <br>
 
 I build web applications with a front-end bias: interfaces that feel fast and obvious, with a backend behind them that stays out of the way.
 
-Computer Science graduate (GPA **3.63/4.00**) from Universitas 17 Agustus 1945 Surabaya. Most of my work lives in the **React / Next.js / TypeScript** world, with some Vue mixed in: an e-commerce platform with live payment integration, a job-application tracker live in production at trackinglamaran.site, a bill-splitting app with in-browser OCR live at splitbills.site, and a POS system built for a bakery client. Lately I take client products from a spec document to an approved, fully interactive demo: a Minecraft & Roblox asset marketplace, a car rental fleet system, a travel agency suite and a veterinary exam platform.
+I studied Computer Science at Universitas 17 Agustus 1945 Surabaya and graduated with a **3.63/4.00** GPA. Most days I work in **React, Next.js and TypeScript**, with some Vue when a project calls for it. Three of my apps are running in production right now: a job-application tracker at trackinglamaran.site, a bill splitter with in-browser OCR at splitbills.site, and the CMS behind my own site at fatihaljabar.com. I've also built an e-commerce platform with live payments and a POS system for a bakery.
 
-My thesis went a different direction: training CNN, LSTM, and BiLSTM models to read sentiment in Indonesian tweets about electric vehicles. The CNN + BiLSTM hybrid landed at **75% accuracy (macro F1 0.76)**, and I shipped it as a Streamlit app rather than leaving it in a notebook.
+Lately most of my time goes into client work: I take a spec document and turn it into a demo the client can click through before any backend exists. A Minecraft and Roblox asset marketplace, a car rental fleet system, a travel agency suite and a vet exam platform all started that way, and the marketplace is now being built for production.
 
-**Based in Indonesia · Open to remote front-end / full-stack roles**
+My thesis went a different direction. I trained CNN, LSTM and BiLSTM models to read sentiment in Indonesian tweets about electric vehicles. The CNN + BiLSTM hybrid landed at **75% accuracy (macro F1 0.76)**, and I shipped it as a Streamlit app instead of leaving it in a notebook.
+
+Based in Indonesia. **Open to remote front-end and full-stack roles.**
 
 <details>
-<summary><b>In a hurry? Open the 30-second version</b></summary>
+<summary><b>Short on time? The 30-second version</b></summary>
 <br>
 
-- **Role**: Front-end leaning full-stack developer, open to remote roles
-- **Daily stack**: React, Next.js, TypeScript, Tailwind CSS, with Vue when the job calls for it
-- **Back end**: Node.js, Express, Hono, Prisma, Drizzle, PostgreSQL, MariaDB
-- **Live in production**: trackinglamaran.site · splitbills.site · fatihaljabar.com
-- **Recent client work**: Blockwave Studios, NusaRide, Ramatama Tours, VetReady, Formkey
-- **Thesis**: CNN + BiLSTM + Attention for Indonesian sentiment, 75% accuracy, macro F1 0.76
-- **Education**: Computer Science, Universitas 17 Agustus 1945 Surabaya, GPA 3.63/4.00
-- **Contact**: fatihaljabar@gmail.com
+| Question | Answer |
+|---|---|
+| What do you do? | Front-end leaning full-stack development. |
+| What do you reach for? | React, Next.js, TypeScript and Tailwind CSS. Vue when the job calls for it. |
+| And on the server? | Node.js with Express or Hono, Prisma or Drizzle, PostgreSQL or MariaDB. |
+| Anything live? | trackinglamaran.site, splitbills.site and fatihaljabar.com. |
+| Recent client work? | Blockwave Studios, NusaRide, Ramatama Tours, VetReady and Formkey. |
+| Thesis? | CNN + BiLSTM + Attention for Indonesian sentiment, 75% accuracy, macro F1 0.76. |
+| Where are you? | Indonesia, UTC+7. Open to remote work. |
+| How do I reach you? | fatihaljabar@gmail.com |
 
 </details>
 
@@ -56,44 +60,46 @@ My thesis went a different direction: training CNN, LSTM, and BiLSTM models to r
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/section-work-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/section-work-light.svg">
-  <img src="assets/section-work-light.svg" width="100%" alt="01 Featured projects">
+  <img src="assets/section-work-light.svg" width="100%" alt="Featured projects">
 </picture>
 
+Every card below is a real screenshot, captured from a local build of that repository. Click one to open the live site or the code.
+
 <p align="center">
-  <a href="https://blockwavestudio-demo.vercel.app"><img src="assets/card-blockwave.svg" width="49%" alt="Blockwave Studios: Minecraft and Roblox asset marketplace, client build, live demo"></a>
-  <a href="https://github.com/fatihaljabar/ottodot-trial-booking"><img src="assets/card-ottodot.svg" width="49%" alt="Ottodot Trial Booking: last-seat race solved with row-locked Postgres transactions"></a>
-  <a href="https://trackinglamaran.site"><img src="assets/card-tracker.svg" width="49%" alt="application-tracker: job-hunt pipeline, live in production at trackinglamaran.site"></a>
-  <a href="https://splitbills.site"><img src="assets/card-splitbill.svg" width="49%" alt="splitbill: OCR bill splitting with exact-rupiah rounding, live at splitbills.site"></a>
-  <a href="https://rentcar-demo-blue.vercel.app"><img src="assets/card-nusaride.svg" width="49%" alt="NusaRide: car and bus rental with fleet operations, live demo"></a>
-  <a href="https://vetready-demo.vercel.app"><img src="assets/card-vetready.svg" width="49%" alt="VetReady: veterinary exam prep with CBT and OSCE simulations, live demo"></a>
-  <a href="https://tours-agent-demo.vercel.app"><img src="assets/card-ramatama.svg" width="49%" alt="Ramatama Tours: travel agency suite from quotation to receipt, live demo"></a>
-  <a href="https://catalog-order-demo.vercel.app"><img src="assets/card-formkey.svg" width="49%" alt="Formkey: artisan keycap storefront with PayPal payment simulator, live demo"></a>
-  <a href="https://event-sport-demo.netlify.app"><img src="assets/card-eventsport.svg" width="49%" alt="event-sport-demo: brackets, live scoring and QR check-in, live demo"></a>
-  <a href="https://fatihaljabar.com"><img src="assets/card-portfolio.svg" width="49%" alt="portfolio: bilingual self-service CMS, live at fatihaljabar.com"></a>
-  <a href="https://fadlanportfolio-demo.vercel.app"><img src="assets/card-fadlan.svg" width="49%" alt="Fadlan Creator: cinematic filmmaker portfolio, live demo"></a>
-  <a href="#spec-sheet"><img src="assets/card-samspos.svg" width="49%" alt="sams-pos-demo: bakery POS and multi-branch inventory, private repo"></a>
+  <a href="https://blockwavestudio-demo.vercel.app"><img src="assets/card-blockwave.svg" width="49%" alt="Blockwave Studios: Minecraft and Roblox asset marketplace. Designed and built solo, from the spec to a client-approved demo."></a>
+  <a href="https://github.com/fatihaljabar/ottodot-trial-booking"><img src="assets/card-ottodot.svg" width="49%" alt="Ottodot Trial Booking: Two parents, one seat left. Row-locked Postgres transactions, idempotent payments, 34 tests including a real race."></a>
+  <a href="https://trackinglamaran.site"><img src="assets/card-tracker.svg" width="49%" alt="application-tracker: Job-hunt companion: an 11-stage pipeline, 14 fields per application, deadline and interview reminders, stats."></a>
+  <a href="https://splitbills.site"><img src="assets/card-splitbill.svg" width="49%" alt="splitbill: Scan a receipt in the browser, split it by item or percentage, and every rupiah still adds up. Short links stay private."></a>
+  <a href="https://rentcar-demo-blue.vercel.app"><img src="assets/card-nusaride.svg" width="49%" alt="NusaRide: Car, Hiace and bus rentals with per-unit availability, a fleet admin, PDF invoices, two languages and two themes."></a>
+  <a href="https://vetready-demo.vercel.app"><img src="assets/card-vetready.svg" width="49%" alt="VetReady: Vet exam prep with a timed CBT simulation, guided OSCE cases, checkout, and portals for participants and admins."></a>
+  <a href="https://tours-agent-demo.vercel.app"><img src="assets/card-ramatama.svg" width="49%" alt="Ramatama Tours: Travel agency suite where a quotation becomes a booking, an invoice and a receipt, with AR, AP and role-based access."></a>
+  <a href="https://catalog-order-demo.vercel.app"><img src="assets/card-formkey.svg" width="49%" alt="Formkey: Storefront for artisan keycaps: catalog, bag, checkout, a PayPal payment simulator and an admin for orders."></a>
+  <a href="https://event-sport-demo.netlify.app"><img src="assets/card-eventsport.svg" width="49%" alt="event-sport-demo: Sports event platform for ISDN: bracket generator, sport-specific live scoring, drag-and-drop scheduling, QR check-in."></a>
+  <a href="https://fatihaljabar.com"><img src="assets/card-portfolio.svg" width="49%" alt="portfolio: My own site and CMS: English and Indonesian, dark mode, an admin dashboard for content, and a full security audit."></a>
+  <a href="https://fadlanportfolio-demo.vercel.app"><img src="assets/card-fadlan.svg" width="49%" alt="Fadlan Creator: Portfolio for a filmmaker: five galleries with their own routes, a video modal, skeleton loading and reduced motion."></a>
+  <a href="#spec-sheet"><img src="assets/card-samspos.svg" width="49%" alt="sams-pos-demo: POS and inventory for a bakery: checkout, purchasing, production, stock across branches and an audit log."></a>
 </p>
 
 <a name="spec-sheet"></a>
 
 <details>
-<summary><b>Open the spec sheet</b>: every project with its full description, stack and links</summary>
+<summary><b>Open the spec sheet</b>: every project with the full description, stack and links</summary>
 <br>
 
 | # | Project | What it does | Stack | Links |
 |---|---|---|---|---|
-| 01 | **Blockwave Studios** <sub>(private repo)</sub> | Digital asset marketplace for Minecraft and Roblox creators. Taken solo from a spec document to a client-approved, fully interactive demo: storefront, customer library and admin console with analytics, coupons and order states. The production build (Next.js 15 + NestJS, PostgreSQL, PayPal, Cloudflare R2) is in progress. | React 19 · Vite · React Router · Tailwind v4 · Framer Motion · Recharts | <a href="https://blockwavestudio-demo.vercel.app">Live demo</a> |
-| 02 | **<a href="https://github.com/fatihaljabar/ottodot-trial-booking">ottodot-trial-booking</a>** | Full-stack take-home: trial classes capped at exactly 4 confirmed students. One PostgreSQL transaction with a class-row lock guards every path to a confirmed seat, idempotency keys make retries safe, and 34 automated tests cover it, including a genuinely concurrent last-seat race. | Next.js · TypeScript · PostgreSQL · Prisma · Zod · Vitest | <a href="https://github.com/fatihaljabar/ottodot-trial-booking">Repo</a> |
-| 03 | **<a href="https://github.com/fatihaljabar/application-tracker">application-tracker</a>** | Job-hunt companion: 11-stage pipeline, 14-field tracking, deadline & interview reminders, document uploads, stats. **Live in production at trackinglamaran.site** | React · Vite · Express · Drizzle (MariaDB) · Cloudflare R2 · Resend | <a href="https://trackinglamaran.site">Live</a> · <a href="https://github.com/fatihaljabar/application-tracker">Repo</a> |
-| 04 | **<a href="https://github.com/fatihaljabar/splitbill">splitbill</a>** | Bill-splitting app: in-browser OCR receipt scanning, flexible item/percentage splitting with exact-rupiah rounding, privacy-first short links. **Live in production at splitbills.site** | Vue 3 · TypeScript · Hono · Drizzle (MySQL) · Tesseract.js | <a href="https://splitbills.site">Live</a> · <a href="https://github.com/fatihaljabar/splitbill">Repo</a> |
-| 05 | **<a href="https://github.com/fatihaljabar/rentcar-demo">NusaRide</a>** | Car, Hiace, Elf and bus rentals: self-drive, chauffeur and airport-transfer booking, per-unit availability, admin CRUD for fleet, drivers and payments, structured PDF invoices and reports, Indonesian/English and light/dark themes. | React 19 · TypeScript · Vite 7 · React Router · Tailwind v4 · Framer Motion · jsPDF | <a href="https://rentcar-demo-blue.vercel.app">Live demo</a> · <a href="https://github.com/fatihaljabar/rentcar-demo">Repo</a> |
-| 06 | **<a href="https://github.com/fatihaljabar/vetready-demo">VetReady</a>** | Interactive demo for a veterinary exam prep platform: timed CBT simulation with flags and answer review, guided OSCE clinical scenarios, checkout with simulated payments, participant dashboard and admin portal. | React 19 · TypeScript · Vite 7 · Tailwind 4 · Framer Motion | <a href="https://vetready-demo.vercel.app">Live demo</a> · <a href="https://github.com/fatihaljabar/vetready-demo">Repo</a> |
-| 07 | **Ramatama Tours** <sub>(private repo)</sub> | Travel agency management demo where quotation, booking, invoice, payment and receipt share one connected data model, with AR/AP, supplier bookings, itineraries, role-based access, multi-currency display and CSV export. | React · TypeScript · Vite · React Router · Tailwind · Framer Motion | <a href="https://tours-agent-demo.vercel.app">Live demo</a> |
-| 08 | **Formkey** <sub>(private repo)</sub> | Storefront demo for artisan keycaps: catalog with search and sorting, bag and checkout, PayPal payment simulator, confirmation email preview, plus an admin for products, categories and orders. | React · TypeScript · Vite · Tailwind · Framer Motion · Playwright | <a href="https://catalog-order-demo.vercel.app">Live demo</a> |
-| 09 | **event-sport-demo** <sub>(private repo)</sub> | ISDN event management demo: bracket generator, sport-specific live scoring engine (combat, race, judged, and more), drag-and-drop scheduling with conflict detection, QR check-in. Still in active development for a client. **Live demo at event-sport-demo.netlify.app** | React · Vite · React Router · Framer Motion | <a href="https://event-sport-demo.netlify.app">Live demo</a> |
-| 10 | **<a href="https://github.com/fatihaljabar/portfolio">portfolio</a>** | Self-service CMS: bilingual EN/ID, dark mode, admin dashboard for content, whole-codebase security audit completed. **Live in production at fatihaljabar.com** | Next.js · TypeScript · Prisma · Supabase · next-intl | <a href="https://fatihaljabar.com">Live</a> · <a href="https://github.com/fatihaljabar/portfolio">Repo</a> |
-| 11 | **Fadlan Creator** <sub>(private repo)</sub> | Cinematic portfolio for a videographer and filmmaker: five category galleries with their own routes, a demo video modal, skeleton loading states and reduced-motion support. | React · Vite · React Router · Tailwind | <a href="https://fadlanportfolio-demo.vercel.app">Live demo</a> |
-| 12 | **sams-pos-demo** <sub>(private repo)</sub> | POS & inventory prototype for a bakery client: checkout, purchasing, production, multi-branch stock, audit logs | Next.js · TypeScript · Tailwind | Private |
+| 01 | **Blockwave Studios** <sub>(private repo)</sub> | Digital asset marketplace for Minecraft and Roblox creators. Taken solo from a spec document to a client-approved, fully interactive demo: storefront, customer library and admin console with analytics, coupons and order states. The production build (Next.js 15 + NestJS, PostgreSQL, PayPal, Cloudflare R2) is in progress. | React 19, Vite, React Router, Tailwind v4, Framer Motion, Recharts | <a href="https://blockwavestudio-demo.vercel.app">Live demo</a> |
+| 02 | **<a href="https://github.com/fatihaljabar/ottodot-trial-booking">ottodot-trial-booking</a>** | Full-stack take-home: trial classes capped at exactly 4 confirmed students. One PostgreSQL transaction with a class-row lock guards every path to a confirmed seat, idempotency keys make retries safe, and 34 automated tests cover it, including a genuinely concurrent last-seat race. | Next.js, TypeScript, PostgreSQL, Prisma, Zod, Vitest | <a href="https://github.com/fatihaljabar/ottodot-trial-booking">Repo</a> |
+| 03 | **<a href="https://github.com/fatihaljabar/application-tracker">application-tracker</a>** | Job-hunt companion: 11-stage pipeline, 14-field tracking, deadline & interview reminders, document uploads, stats. **Live in production at trackinglamaran.site** | React, Vite, Express, Drizzle (MariaDB), Cloudflare R2, Resend | <a href="https://trackinglamaran.site">Live</a> / <a href="https://github.com/fatihaljabar/application-tracker">Repo</a> |
+| 04 | **<a href="https://github.com/fatihaljabar/splitbill">splitbill</a>** | Bill-splitting app: in-browser OCR receipt scanning, flexible item/percentage splitting with exact-rupiah rounding, privacy-first short links. **Live in production at splitbills.site** | Vue 3, TypeScript, Hono, Drizzle (MySQL), Tesseract.js | <a href="https://splitbills.site">Live</a> / <a href="https://github.com/fatihaljabar/splitbill">Repo</a> |
+| 05 | **<a href="https://github.com/fatihaljabar/rentcar-demo">NusaRide</a>** | Car, Hiace, Elf and bus rentals: self-drive, chauffeur and airport-transfer booking, per-unit availability, admin CRUD for fleet, drivers and payments, structured PDF invoices and reports, Indonesian/English and light/dark themes. | React 19, TypeScript, Vite 7, React Router, Tailwind v4, Framer Motion, jsPDF | <a href="https://rentcar-demo-blue.vercel.app">Live demo</a> / <a href="https://github.com/fatihaljabar/rentcar-demo">Repo</a> |
+| 06 | **<a href="https://github.com/fatihaljabar/vetready-demo">VetReady</a>** | Interactive demo for a veterinary exam prep platform: timed CBT simulation with flags and answer review, guided OSCE clinical scenarios, checkout with simulated payments, participant dashboard and admin portal. | React 19, TypeScript, Vite 7, Tailwind 4, Framer Motion | <a href="https://vetready-demo.vercel.app">Live demo</a> / <a href="https://github.com/fatihaljabar/vetready-demo">Repo</a> |
+| 07 | **Ramatama Tours** <sub>(private repo)</sub> | Travel agency management demo where quotation, booking, invoice, payment and receipt share one connected data model, with AR/AP, supplier bookings, itineraries, role-based access, multi-currency display and CSV export. | React, TypeScript, Vite, React Router, Tailwind, Framer Motion | <a href="https://tours-agent-demo.vercel.app">Live demo</a> |
+| 08 | **Formkey** <sub>(private repo)</sub> | Storefront demo for artisan keycaps: catalog with search and sorting, bag and checkout, PayPal payment simulator, confirmation email preview, plus an admin for products, categories and orders. | React, TypeScript, Vite, Tailwind, Framer Motion, Playwright | <a href="https://catalog-order-demo.vercel.app">Live demo</a> |
+| 09 | **event-sport-demo** <sub>(private repo)</sub> | ISDN event management demo: bracket generator, sport-specific live scoring engine (combat, race, judged, and more), drag-and-drop scheduling with conflict detection, QR check-in. Still in active development for a client. **Live demo at event-sport-demo.netlify.app** | React, Vite, React Router, Framer Motion | <a href="https://event-sport-demo.netlify.app">Live demo</a> |
+| 10 | **<a href="https://github.com/fatihaljabar/portfolio">portfolio</a>** | Self-service CMS: bilingual EN/ID, dark mode, admin dashboard for content, whole-codebase security audit completed. **Live in production at fatihaljabar.com** | Next.js, TypeScript, Prisma, Supabase, next-intl | <a href="https://fatihaljabar.com">Live</a> / <a href="https://github.com/fatihaljabar/portfolio">Repo</a> |
+| 11 | **Fadlan Creator** <sub>(private repo)</sub> | Cinematic portfolio for a videographer and filmmaker: five category galleries with their own routes, a demo video modal, skeleton loading states and reduced-motion support. | React, Vite, React Router, Tailwind | <a href="https://fadlanportfolio-demo.vercel.app">Live demo</a> |
+| 12 | **sams-pos-demo** <sub>(private repo)</sub> | POS & inventory prototype for a bakery client: checkout, purchasing, production, multi-branch stock, audit logs | Next.js, TypeScript, Tailwind | Private |
 
 </details>
 
@@ -104,11 +110,11 @@ My thesis went a different direction: training CNN, LSTM, and BiLSTM models to r
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/section-stack-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/section-stack-light.svg">
-  <img src="assets/section-stack-light.svg" width="100%" alt="02 Tech stack">
+  <img src="assets/section-stack-light.svg" width="100%" alt="Tech stack">
 </picture>
 
 <p align="center">
-  <img src="assets/stack.svg" width="100%" alt="Tech stack marquee: front-end, back-end and data, machine learning and tooling">
+  <img src="assets/stack.svg" width="100%" alt="Tech stack on three conveyor belts: front-end, back-end and data, machine learning and tooling">
 </p>
 
 <details>
@@ -188,21 +194,21 @@ My thesis went a different direction: training CNN, LSTM, and BiLSTM models to r
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/section-thesis-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/section-thesis-light.svg">
-  <img src="assets/section-thesis-light.svg" width="100%" alt="03 Final thesis">
+  <img src="assets/section-thesis-light.svg" width="100%" alt="Final thesis">
 </picture>
 
 <p align="center">
-  <img src="assets/thesis.svg" width="100%" alt="Pipeline from Indonesian tweets through cleaning, case folding, Sastrawi stemming and quantile labeling into Conv1D, BiLSTM and attention layers; the CNN + BiLSTM + Attention hybrid wins with 75% accuracy">
+  <img src="assets/thesis.svg" width="100%" alt="Pipeline from Indonesian tweets through cleaning, case folding, Sastrawi stemming and quantile labeling into Conv1D, BiLSTM and attention layers. The CNN + BiLSTM + Attention hybrid wins with 75% accuracy.">
 </p>
 
 **Sentiment Analysis on Online Reviews of Electric Vehicles Using Deep Learning**
 
-Compared four architectures (CNN, LSTM, BiLSTM, and a CNN + BiLSTM hybrid with Attention) on Indonesian-language tweets (Jan 2023 to Aug 2025). Built the full Indonesian NLP pipeline: text cleaning, case folding, Sastrawi stemming, and lexicon-based quantile labeling. The hybrid model won at **75% accuracy / 0.76 macro F1**, and was deployed as a Streamlit app for real-time prediction.
+I compared four architectures (CNN, LSTM, BiLSTM, and a CNN + BiLSTM hybrid with Attention) on Indonesian-language tweets from January 2023 to August 2025. I built the whole Indonesian NLP pipeline myself: text cleaning, case folding, Sastrawi stemming and lexicon-based quantile labeling. The hybrid won at **75% accuracy / 0.76 macro F1**, and it runs as a Streamlit app for real-time prediction.
 
 <p>
-  <a href="https://project-ta-fatih.streamlit.app"><img src="assets/btn-demo.svg" height="40" alt="Live demo"></a>
-  <a href="https://github.com/fatihaljabar/project-TA"><img src="assets/btn-source.svg" height="40" alt="Source code"></a>
-  <a href="https://doi.org/10.36040/jati.v10i1.17094"><img src="assets/btn-article.svg" height="40" alt="Article"></a>
+  <a href="https://project-ta-fatih.streamlit.app"><img src="assets/btn-demo.svg" height="44" alt="Live demo"></a>
+  <a href="https://github.com/fatihaljabar/project-TA"><img src="assets/btn-source.svg" height="44" alt="Source code"></a>
+  <a href="https://doi.org/10.36040/jati.v10i1.17094"><img src="assets/btn-article.svg" height="44" alt="Article"></a>
 </p>
 
 <br>
@@ -212,41 +218,98 @@ Compared four architectures (CNN, LSTM, BiLSTM, and a CNN + BiLSTM hybrid with A
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/section-certs-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/section-certs-light.svg">
-  <img src="assets/section-certs-light.svg" width="100%" alt="04 Certifications">
+  <img src="assets/section-certs-light.svg" width="100%" alt="Certifications">
 </picture>
 
-<sub>Issued by <b>Dicoding Indonesia</b> unless noted.</sub>
+All issued by **Dicoding Indonesia**.
 
-- <a href="https://www.dicoding.com/certificates/N9ZOY1Y7DPG5">Becoming an Expert Front-End Web Developer</a>: PWA, accessibility, automation testing, CI/CD
-- <a href="https://www.dicoding.com/certificates/EYX4J058OZDL">Front-End Web Development Fundamentals</a>: Web Components, module bundlers, async JS
-- <a href="https://www.dicoding.com/certificates/EYX4J9RROZDL">Front-End Web Development for Beginners</a>: DOM manipulation, events, web storage
-- <a href="https://www.dicoding.com/certificates/2VX349OGVZYQ">Back-End Fundamentals with JavaScript</a>: RESTful APIs, Node.js, Hapi, AWS EC2
-- <a href="https://www.dicoding.com/certificates/NVP741O0WPR0">JavaScript Programming Basics</a>: OOP, functional programming, async
-- <a href="https://www.dicoding.com/certificates/6RPNYN60QZ2M">Building a Career as a Software Developer</a>
+| Course | What it covers |
+|---|---|
+| <a href="https://www.dicoding.com/certificates/N9ZOY1Y7DPG5">Becoming an Expert Front-End Web Developer</a> | PWA, accessibility, automation testing, CI/CD |
+| <a href="https://www.dicoding.com/certificates/EYX4J058OZDL">Front-End Web Development Fundamentals</a> | Web Components, module bundlers, async JS |
+| <a href="https://www.dicoding.com/certificates/EYX4J9RROZDL">Front-End Web Development for Beginners</a> | DOM manipulation, events, web storage |
+| <a href="https://www.dicoding.com/certificates/2VX349OGVZYQ">Back-End Fundamentals with JavaScript</a> | RESTful APIs, Node.js, Hapi, AWS EC2 |
+| <a href="https://www.dicoding.com/certificates/NVP741O0WPR0">JavaScript Programming Basics</a> | OOP, functional programming, async |
+| <a href="https://www.dicoding.com/certificates/6RPNYN60QZ2M">Building a Career as a Software Developer</a> |  |
 
 <br>
 
-<a name="stats"></a>
+<a name="activity"></a>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/section-stats-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/section-stats-light.svg">
-  <img src="assets/section-stats-light.svg" width="100%" alt="05 GitHub stats">
+  <img src="assets/section-stats-light.svg" width="100%" alt="GitHub activity">
 </picture>
 
 <p align="center">
-  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=fatihaljabar&show_icons=true&include_all_commits=true&count_private=true&rank_icon=github&bg_color=111317&title_color=C9F31D&text_color=EEEBE3&icon_color=C9F31D&ring_color=C9F31D&border_color=252931&border_radius=16" alt="GitHub stats"/>
-  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=fatihaljabar&layout=compact&langs_count=8&hide=html,css,scss&bg_color=111317&title_color=C9F31D&text_color=EEEBE3&border_color=252931&border_radius=16" alt="Top languages"/>
+  <img src="assets/activity.svg" width="100%" alt="Commits per week over the last 52 weeks with a 4-week average, commits by repository, and lines of code by language">
 </p>
+
+<details>
+<summary><b>The numbers behind the chart</b></summary>
+<br>
+
+Counted from the git history of 18 repositories, public and private, as of 4 October 2026: 594 commits in the last 52 weeks over 67 active days, longest streak 13 days.
+
+| Month | Commits |
+|---|---:|
+| Oct 2025 | 0 |
+| Nov 2025 | 0 |
+| Dec 2025 | 7 |
+| Jan 2026 | 3 |
+| Feb 2026 | 82 |
+| Mar 2026 | 106 |
+| Apr 2026 | 51 |
+| May 2026 | 0 |
+| Jun 2026 | 0 |
+| Jul 2026 | 4 |
+| Aug 2026 | 288 |
+| Sep 2026 | 53 |
+| Oct 2026 | 0 |
+
+| Repository | Commits |
+|---|---:|
+| sports-event-management-dashboard | 226 |
+| portfolio | 148 |
+| application-tracker | 103 |
+| splitbill | 51 |
+| fatihaljabar | 16 |
+| ottodot-trial-booking | 12 |
+| tours-agent-demo | 10 |
+| project-ta | 7 |
+| sams-pos-demo | 4 |
+| rentcar-demo | 3 |
+| flutter-app | 3 |
+| vetready-demo | 2 |
+| blockwavestudio-demo | 2 |
+| blockwave-demo | 2 |
+| event-sport-demo | 2 |
+| blockwavestudio-dev | 1 |
+| catalog-order-demo | 1 |
+| fadlanportfolio-demo | 1 |
+
+| Language | Lines | Share |
+|---|---:|---:|
+| TypeScript | 115,359 | 87.1% |
+| CSS | 5,942 | 4.5% |
+| Dart | 3,990 | 3.0% |
+| Vue | 3,328 | 2.5% |
+| Python | 2,175 | 1.6% |
+| HTML | 830 | 0.6% |
+| JavaScript | 522 | 0.4% |
+| SQL | 301 | 0.2% |
+
+</details>
 
 <br>
 
 <p align="center">
-  <a href="mailto:fatihaljabar@gmail.com"><img src="assets/footer.svg" width="100%" alt="Open to remote opportunities: feel free to reach out."></a>
+  <a href="mailto:fatihaljabar@gmail.com"><img src="assets/footer.svg" width="100%" alt="Open to remote opportunities. Feel free to reach out at fatihaljabar@gmail.com."></a>
 </p>
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=fatihaljabar&style=flat-square&color=C9F31D&label=profile+views" alt="Profile views"/>
   <br>
-  <sub><a href="#top">back to top</a> · every animation on this page is hand-written SVG and CSS, generated by <a href="scripts/build_assets.py">scripts/build_assets.py</a></sub>
+  <sub><a href="#top">Back to top</a>. Every drawing on this page is plain SVG and CSS, generated by <a href="scripts/build_assets.py">scripts/build_assets.py</a>.</sub>
 </p>

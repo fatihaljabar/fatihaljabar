@@ -1,0 +1,17 @@
+{
+  "route": "/",
+  "alt_route": "/admin (signed in through /admin/login as admin / admin123; Performa bisnis period switched to '7 hari terakhir' with the app's own dropdown)",
+  "how_run": "npm ci in /home/user/rentcar-demo, then npx vite --port 5302 --strictPort --host 127.0.0.1 (dev server). Captured with Playwright Chromium 1194 from /home/user/shots-work/nusaride/capture.mjs, with the browser process given an Indonesian OS locale (LANG=id_ID.UTF-8) so native date/time inputs show 05/10/2026 and 08.00",
+  "mocked": true,
+  "mock_summary": "There is no backend; all fleet, booking, payment and unit data is the app's own seed data (src/data.ts), generated relative to today and kept in localStorage. Only the blocked CDNs were mocked through page.route. The Google Fonts css2 request (Poppins 400/500/600/700 plus 400/500 italic, Lora 400/500/600 plus 400/500 italic) was answered with @font-face rules from @fontsource/poppins and @fontsource/lora, with the woff2/woff files served locally. cdn-uicons.flaticon.com uicons-regular-rounded.css and its webfonts were served from @flaticon/flaticon-uicons 3.3.1. Before load, localStorage was set to nusaride-lang 'id' and nusaride-dark false. The admin session came from the real login form. Toast notifications were hidden with CSS.",
+  "issues": [
+    "Flaticon icons come from the npm package (v3.3.1), not the live CDN build. All 68 icons on the home page and 52 on the dashboard resolved to glyphs, but individual glyph drawings could differ slightly from the current CDN version.",
+    "Seeded payments all fall within the last 4 days, so the default '30 hari terakhir' revenue chart is flat at 0 with a single spike on today. The alt capture uses the app's own '7 hari terakhir' filter, which shows a real curve; the headline revenue figure is the same in both views (Rp27.650.000). The fleet donut is dominated by Available (36 of 39) because that is how the seed data is set up.",
+    "mobile.png is cropped at 5064 image px (2532 CSS px at DSF 2). The full mobile home page is 6023 CSS px tall, so the capture ends inside the 'Anda nikmati perjalanannya' promise section.",
+    "On mobile the hero uses /images/mobile-hero.webp under a heavy shade overlay, so the car is quite dark. This is the production design, not a loading problem.",
+    "The customer site is almost monochrome (near-black #1B2324 CTAs on white). The brand blue #1956F3 (--primary) appears mainly in the admin workspace (chart, links), and the orange --accent #F55C15 only in the logo dot."
+  ],
+  "page_title": "NusaRide | Setiap Perjalanan, Lebih Berarti.",
+  "accent_hex": "#1956F3",
+  "background_hex": "#FFFFFF"
+}

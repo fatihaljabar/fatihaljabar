@@ -1,0 +1,17 @@
+{
+  "route": "/",
+  "alt_route": "/admin",
+  "how_run": "Repo /home/user/blockwavestudio-dev (client-approved demo). npm ci; npx vite build; npx vite preview --port 4701. Admin reached via /login -> one-click 'Admin (admin@blockwave.studio)' demo access, then /admin. Captured with Playwright Chromium (1440x900 DSF1, 390x844 DSF2 iPhone UA). Full-page shots are rendered in 900px bands and stitched, because rasterising the whole page at once leaves some 2048px PNG thumbnails undecoded.",
+  "mocked": false,
+  "mock_summary": "No backend exists: all catalogue, order and admin data is the app's own seed data in src/lib/catalog.ts / mock.ts persisted in localStorage. Nothing was mocked. The only interception: /marketplace/* and /img/* artwork is not committed in blockwavestudio-dev (requests fall back to index.html), so those requests were fulfilled from the identical files in the sibling client repo /home/user/blockwave-demo/public (same filenames, same project). No source files were edited.",
+  "issues": [
+    "Source typo visible in the hero on every breakpoint: secondary CTA reads 'Browse Categori' (src/pages/store/Home.tsx:239). Left as-is to match production.",
+    "Marketplace artwork (/marketplace, /img) is missing from the blockwavestudio-dev repo itself; served from /home/user/blockwave-demo/public during capture. A fresh deploy of the dev repo would show empty image tiles unless those assets are added.",
+    "For capture only: toasts (e.g. 'Signed in as admin') hidden, the 10px stable scrollbar gutter removed, and the campaign marquee paused so stitched full-page bands line up. Hero carousel reset to slide 1 ('Assets made for Minecraft & Roblox') before each shot.",
+    "desktop-full.png is cropped at 5400px (page is 9610px); it ends after the 'Up to 40% off' sale grid. mobile.png is cropped at 5064px (2532 CSS px of a 19471 CSS px page) and ends mid-way through the first recommended product card.",
+    "Extra (optional): desktop-alt-analytics.png = /admin/analytics, with a 12-month stacked revenue bar chart and units donut; arguably richer chart content than /admin."
+  ],
+  "page_title": "Blockwave Studios | Digital Assets for Minecraft & Roblox Development",
+  "accent_hex": "#82ADF6",
+  "background_hex": "#090B0F"
+}
