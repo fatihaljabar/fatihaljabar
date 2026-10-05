@@ -1,0 +1,15 @@
+{
+  "route": "/",
+  "alt_route": "/admin (Overview, after the in-app demo login: 'Fill credentials' -> admin@formkey.demo / formkey123 -> 'Enter the studio')",
+  "how_run": "npm ci; npx vite --port 5282 --strictPort (dev server). Fresh localStorage/sessionStorage before each capture; for the alt the page is reloaded after login (admin flag is in sessionStorage) so the 'Welcome back to the studio.' toast is not visible.",
+  "mocked": false,
+  "mock_summary": "No backend to mock: the storefront and admin use the app's own seed products/orders from src/lib/data.ts (English copy, USD prices, as in production). External assets only were served locally via page.route: the Google Fonts Poppins CSS (Google returns only static 300/400/500/600/700/800 for this URL, dropping 450/550/650/750, mirrored here) rebuilt from @fontsource/poppins latin + latin-ext woff2, and cdn-uicons.flaticon.com uicons-regular-rounded CSS + woff2 served from @flaticon/flaticon-uicons. All local product images (public/images/*.webp) loaded and no other external requests were made.",
+  "issues": [
+    "Icons come from @flaticon/flaticon-uicons 3.3.1 (npm) while production links the CDN's 3.0.0 CSS. Every icon name the app uses exists in 3.3.1 and renders, and the result matches the repo's artifacts/ reference screenshots, but individual glyph shapes could differ very slightly from the 3.0.0 set.",
+    "mobile.png is 780x4902, not the 5064 maximum: the 5064px limit landed in the middle of the 'Your keyboard. Your kind of different.' heading, so the crop ends 36 CSS px below the craft-teaser card, on a section boundary.",
+    "Admin overview shows the app's own seed customers (Alex Morgan / Jamie Chen with @example.com emails). These come from the repo's seed data and were not changed."
+  ],
+  "page_title": "Formkey | Small keys. Extraordinary character.",
+  "accent_hex": "#7B8871",
+  "background_hex": "#FDFCF9"
+}

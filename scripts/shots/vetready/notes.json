@@ -1,0 +1,16 @@
+{
+  "route": "/ (landing page; app uses in-memory state routing, so every screen is served from /)",
+  "alt_route": "/ -> header 'Dashboard' -> 'Lanjutkan' on Simulasi CBT (internal route 'cbt-exam'): CBT exam mid-session, question 4 of 8, 4 answered, question 3 flagged, about 18:40 left on the timer",
+  "how_run": "npm ci in /home/user/vetready-demo, then npx vite --port 5301 --strictPort --host 127.0.0.1 (dev server). Captured with Playwright Chromium 1194 from /home/user/shots-work/vetready/capture.mjs",
+  "mocked": true,
+  "mock_summary": "No backend exists; the app keeps all data in localStorage. For the alt screen a Playwright init script seeded vetready:loggedIn=true and a vetready:cbt-session object shaped like the app's CBTSession type. It uses the app's own 8 demo questions in a fixed shuffle (order 2,5,7,1,4,8,3,6), correct answers for 4 of them, question 7 flagged, currentIndex 3, and startedAt set so 18:42 remained. Participant profile, purchases and attempt history are the app's built-in seed data (Nadira Ayu, Universitas Airlangga). The landing page and mobile captures use a fresh, logged-out state.",
+  "issues": [
+    "The app declares font-family Inter (and Geist Mono for font-mono) but never loads either font, so production visitors without them installed locally see Segoe UI/Arial and a system monospace. These captures supply Inter 400-700 and Geist Mono 400-600 from @fontsource as local data-URI @font-face rules, injected at runtime, to show the intended typography. Consider adding real font loading to the app.",
+    "index.css has an unlayered 'button, a, input, textarea, select { font: inherit; }' rule. It overrides Tailwind's layered text-size utilities on buttons, so some buttons ('Tandai ragu', 'Selesaikan ujian', 'Tambah program') render larger than their text-xs/text-sm classes. This is the real production rendering and was left as is.",
+    "mobile.png is cropped at 5064 image px (2532 CSS px at DSF 2). The full mobile page is 5356 CSS px tall, so the capture ends after the three programme rows; the dark CBT preview section, testimonial and footer are cut off.",
+    "No external hosts are requested by the app; hero and OSCE images are local (public/images)."
+  ],
+  "page_title": "VetReady UKMPPDH | Persiapan UKMPPDH",
+  "accent_hex": "#00D4A4",
+  "background_hex": "#F8F6F1"
+}

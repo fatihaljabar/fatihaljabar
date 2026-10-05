@@ -1,0 +1,17 @@
+{
+  "route": "/app",
+  "alt_route": "/app/sales/quotations (detail drawer of QT-2609-0043 · Japan Independent Trip opened)",
+  "how_run": "npm ci; npx vite --port 5281 --strictPort (dev server). Logged in through the real login page using the 'Owner' role shortcut (owner@ramatamatours.co.id, Firman Ahmad) on a fresh localStorage seed, then reloaded once to drop the login toast.",
+  "mocked": false,
+  "mock_summary": "No backend to mock: the app is localStorage-only and its own seed data (dates relative to today, IDR, Indonesian clients/corporates) is shown as-is. Only external assets were intercepted with page.route: fonts.googleapis.com Poppins CSS (ital 0: 300-700, ital 1: 400) rebuilt from @fontsource/poppins latin + latin-ext woff2 files served under fonts.gstatic.com. No other external requests were made.",
+  "issues": [
+    "App bug, left as-is: the Dashboard 'Komposisi Client' donut legend prints raw unformatted IDR values (626687500 / 1031200000) because DonutChart renders d.value directly. With the expanded sidebar at 1440px these numbers overflow past the card's right edge, so desktop-hero and desktop-full use the app's own collapsed-sidebar mode (ramatama.sidebar = collapsed), where the legend fits inside the card. The raw numbers are still visible on desktop and mobile.",
+    "desktop-full was taken by growing the viewport to the document height (2393px) instead of a stitched fullPage capture, so the sticky h-screen sidebar runs the full height instead of stopping after the first 900px.",
+    "In the departure calendar the busiest day (9 Okt 2026) is selected in all dashboard captures so the event list under the calendar is populated instead of showing 'Tidak ada jadwal pada 4 Okt 2026'.",
+    "Seed data quirk, not visible in the alt shot: the activity log names QT-2609-0043 'Istanbul Solo Trip' while the quotation itself is 'Japan Independent Trip'. The activity entry is visible in desktop-full.",
+    "mobile.png is 780x4884, not the 5064 maximum: the crop ends 6 CSS px below the last fully visible row (first 'Tour Terdekat' card) instead of cutting through the next card's border."
+  ],
+  "page_title": "Ramatama Tours | Travel Agency Management System",
+  "accent_hex": "#111827",
+  "background_hex": "#F3F4F6"
+}

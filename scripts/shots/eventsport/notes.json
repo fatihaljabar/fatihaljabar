@@ -1,0 +1,18 @@
+{
+  "route": "/ (Dashboard, after demo login as Super Admin andini@isdn.id / admin123)",
+  "alt_route": "/live (Live Score console, default scope Nusantara Cup 2025 · Sepak Bola, live quarter-final NC25-SEPA-020 Srikandi Putri 4-1 Banteng Merah selected)",
+  "how_run": "npm ci in /home/user/event-sport-demo, then npx vite --port 5391 --strictPort --host 127.0.0.1 (dev server). Captured with Playwright Chromium 1194 via /home/user/shots-work/eventsport/capture.mjs. The session is in memory only, so the script logs in through the login form and then navigates client-side (history.pushState + popstate) instead of reloading.",
+  "mocked": false,
+  "mock_summary": "No backend exists and no API calls were mocked. Every number, team, match and event comes from the app's own in-memory seed data (src/lib/data.ts), e.g. Nusantara Cup 2025 in Jakarta, Garuda Badminton Open in Surabaya, Pekan Olahraga Nusantara 2025. Only blocked static hosts were served locally through page.route: Plus Jakarta Sans (variable 200-800, normal + italic) from @fontsource-variable/plus-jakarta-sans in place of fonts.googleapis.com/gstatic, Flaticon UIcons regular-rounded from @flaticon/flaticon-uicons in place of cdn-uicons.flaticon.com, and i.pravatar.cc user avatars replaced by SVG initials avatars (AK, BS, CL, DP, BA) styled like the app's own Avatar fallback.",
+  "issues": [
+    "The seed data dates are relative to the machine clock (container date 2026-10-04), so the hero shows 28 Sep 2026 - 16 Okt 2026 and a live countdown. The countdown digits are whatever they read at capture time.",
+    "The dashboard hero is an auto-rotating 3-slide carousel. All dashboard captures were timed to land on slide 1/3 (Nusantara Cup 2025, 3 live matches) after its enter animation finished. The thin autoplay progress bar along the top edge of the hero is part of the design.",
+    "desktop-full.png was captured with the viewport grown to the full document height (3021 px) so the position:fixed, h-screen sidebar spans the whole page instead of stopping at 900 px. Because of this the sidebar shows every nav group (Operasional, Bisnis, Sistem), and the 'Paket Pro' card sits at the bottom of the page. In a normal 900 px window those groups are reached by scrolling the sidebar.",
+    "mobile.png is cropped at 5064 image px (2532 CSS px at DSF 2). The full mobile dashboard is 6222 CSS px tall, so the capture ends inside the 'Cabang olahraga yang sedang berjalan' card list. Today's schedule, notifications, the engagement chart, sponsors and the footer are cut off.",
+    "The npm UIcons package is v3.3.1 while index.html pins the CDN at 2.6.0. Every icon on the captured screens resolved. One icon, fi-rr-racing-flag on /events, has no glyph in v3.3.1 and would render empty there; that screen was not captured.",
+    "The i.pravatar.cc avatars in the USERS seed are not rendered on any captured screen. The Avatar component shows initials there, and the route replacement exists only as a safety net."
+  ],
+  "page_title": "ISDN",
+  "accent_hex": "#C26A45",
+  "background_hex": "#FAF9F7"
+}

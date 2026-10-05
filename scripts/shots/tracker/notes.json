@@ -1,0 +1,22 @@
+{
+  "route": "/",
+  "alt_route": "/statistics",
+  "how_run": "npm ci in /home/user/application-tracker (postinstall runs tsc -b && vite build), then `npx vite preview --port 4391 --strictPort --host 127.0.0.1` serving dist/. The Express/MariaDB server was not started. Capture script: /home/user/shots-work/tracker/capture.mjs (mock data in mockdata.mjs). Playwright context uses locale id-ID and timezone Asia/Jakarta.",
+  "mocked": true,
+  "mock_summary": "All /api calls fulfilled via page.route following server/routes + shared/types.ts: GET /api/auth/me returns user Dimas Arya Nugroho (fictional), GET /api/state returns a full DB object, GET /api/health returns ok. Seed: 15 applications across all 11 real stages (wishlist, applied, screening, hr_interview, user_interview, technical_test, offer, rejected, ghosted, withdrawn; none accepted) at fictional companies (Kanvas Labs, Paylane, Jelajah, Bank Sinar and others). Each has full status history, IDR salary ranges (Rp 18-60 jt), sources, tags and documents. Also 34 activities, 13 reminders (interviews, take-home, follow-ups, server-style 'Besok: Deadline X' items), 5 documents, 2 interview notes, 3 bookmarks, 3 company wishes, and the default tags. Landing capture uses /api/auth/me -> {user:null}. Plus Jakarta Sans (inline @font-face pointing at fonts.gstatic.com) is served from @fontsource-variable/plus-jakarta-sans with each subset file mapped to its matching file. Flaticon UIcons CDN CSS and fonts are served from @flaticon/flaticon-uicons; all 68 icon classes used in src/ exist in that package. accounts.google.com/gsi/client is replaced with a no-op stub so the sign-in page does not show the 'Gagal masuk' toast. The real Google button is invisible anyway.",
+  "issues": [
+    "Google Identity Services is stubbed. The landing page looks the same as production because the GSI button is rendered with opacity 0 under the app's own button, but sign-in cannot be clicked through.",
+    "desktop-full.png and statistics-full.png were taken by growing the viewport to the page height (1362 and 1205 px), not with fullPage. With fullPage, the fixed sidebar ends at 900 px.",
+    "mobile.png is cropped at a clean section edge (2209 CSS px = 4418 device px), so the last dashboard section ('Lamaran' recent list) is left out.",
+    "All company names in the mock job search are fictional, so the screenshot does not suggest real applications."
+  ],
+  "page_title": "Tracking Lamaran \u2014 Pelacak Lamaran Kerja",
+  "accent_hex": "#2F6F5E",
+  "background_hex": "#F7F6F3",
+  "extra_files": {
+    "landing.png": "Public sign-in/landing page, 1440x900 DSF1, logged out",
+    "pipeline.png": "Kanban pipeline /pipeline, 1440x900 DSF1. Shows the first 4 of 11 stage columns plus part of the 5th",
+    "detail.png": "Application detail modal (Xendit, User Interview) over the pipeline, 1440x900 DSF1",
+    "statistics-full.png": "Full /statistics page at 1440 wide"
+  }
+}

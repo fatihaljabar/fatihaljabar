@@ -1,0 +1,17 @@
+{
+  "route": "/en",
+  "alt_route": "/en/admin/projects/<application-tracker id>/edit",
+  "how_run": "npm ci in /home/user/portfolio; local Postgres 16 cluster (system binaries, data dir /home/user/shots-work/portfolio/pgdata, port 54331); prisma migrate deploy; custom seed /home/user/shots-work/portfolio/seed.cjs; tiny mock Supabase Auth server (mock-supabase.cjs, port 54332) via gitignored .env.local; next build --webpack + next start -p 3217 (Google Fonts Manrope/Sacramento fetched at build time through the egress proxy, so typography is the real self-hosted next/font output); Playwright script shoot.mjs, dark theme, en-US, Asia/Jakarta.",
+  "mocked": true,
+  "mock_summary": "No Supabase/production DB access, so content was seeded into a local Postgres using the repo's own history: Home greeting/based-in/intro and About copy from the next-intl strings migrated in be5a68a, the exact 53 skills (names, categories, contrast-tuned colors) from the hardcoded list migrated in 04fdd9f, the Dicoding internship and Untag Surabaya education/thesis entries from f299bac, Dicoding certificates using the repo's local /img/achievements images and real credential IDs from the profile README, and 6 real projects (application-tracker, splitbill, event-sport-demo, sams-pos-demo, CNN+BiLSTM EV sentiment thesis, portfolio) with EN/ID copy. 4 fictional contact-form messages (Indonesian names, plausible company domains), 42 Love rows for the support counter. Admin session is a cookie for a mock Supabase /auth/v1/user endpoint returning the allowlisted email; no source files were edited.",
+  "issues": [
+    "Sidebar photo is the repo's fallback /img/profile.jpg (a landscape image); production may show a different photo uploaded to Supabase Storage, which is unreachable here.",
+    "Home intro text is the copy that was migrated into the DB in Aug 2026; the live site may have been edited since via the CMS.",
+    "Project cover images live on Supabase Storage in production (blocked). Only the extra desktop-projects.png and the small image preview in desktop-alt-editor-full.png use them; there they are substituted with the real local screenshots of tracker/splitbill/eventsport/samspos from /home/user/shots, served by intercepting /_next/image. The hero, full, mobile and desktop-alt shots do not depend on them.",
+    "Brand is monochrome; secondary accent is #FFD700 (love counter badge, link underlines) besides the #3B82F6 verified-badge blue.",
+    "Extras in this folder: desktop-alt-dashboard.png (admin dashboard with stats and recent messages), desktop-alt-editor-full.png (whole project editor), desktop-id-home.png (Indonesian home), desktop-projects.png (public projects list with substituted covers)."
+  ],
+  "page_title": "Front-end & Fullstack Developer",
+  "accent_hex": "#3B82F6",
+  "background_hex": "#0A0A0A"
+}

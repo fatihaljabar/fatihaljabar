@@ -1,0 +1,359 @@
+{
+  "as_of": "2026-10-04",
+  "repos_scanned": 18,
+  "commits_all_time": 597,
+  "weeks": [
+    {
+      "week": "2025-10-06",
+      "commits": 0
+    },
+    {
+      "week": "2025-10-13",
+      "commits": 0
+    },
+    {
+      "week": "2025-10-20",
+      "commits": 0
+    },
+    {
+      "week": "2025-10-27",
+      "commits": 0
+    },
+    {
+      "week": "2025-11-03",
+      "commits": 0
+    },
+    {
+      "week": "2025-11-10",
+      "commits": 0
+    },
+    {
+      "week": "2025-11-17",
+      "commits": 0
+    },
+    {
+      "week": "2025-11-24",
+      "commits": 0
+    },
+    {
+      "week": "2025-12-01",
+      "commits": 0
+    },
+    {
+      "week": "2025-12-08",
+      "commits": 0
+    },
+    {
+      "week": "2025-12-15",
+      "commits": 7
+    },
+    {
+      "week": "2025-12-22",
+      "commits": 0
+    },
+    {
+      "week": "2025-12-29",
+      "commits": 0
+    },
+    {
+      "week": "2026-01-05",
+      "commits": 0
+    },
+    {
+      "week": "2026-01-12",
+      "commits": 0
+    },
+    {
+      "week": "2026-01-19",
+      "commits": 0
+    },
+    {
+      "week": "2026-01-26",
+      "commits": 3
+    },
+    {
+      "week": "2026-02-02",
+      "commits": 0
+    },
+    {
+      "week": "2026-02-09",
+      "commits": 0
+    },
+    {
+      "week": "2026-02-16",
+      "commits": 1
+    },
+    {
+      "week": "2026-02-23",
+      "commits": 97
+    },
+    {
+      "week": "2026-03-02",
+      "commits": 45
+    },
+    {
+      "week": "2026-03-09",
+      "commits": 35
+    },
+    {
+      "week": "2026-03-16",
+      "commits": 10
+    },
+    {
+      "week": "2026-03-23",
+      "commits": 0
+    },
+    {
+      "week": "2026-03-30",
+      "commits": 18
+    },
+    {
+      "week": "2026-04-06",
+      "commits": 23
+    },
+    {
+      "week": "2026-04-13",
+      "commits": 0
+    },
+    {
+      "week": "2026-04-20",
+      "commits": 7
+    },
+    {
+      "week": "2026-04-27",
+      "commits": 3
+    },
+    {
+      "week": "2026-05-04",
+      "commits": 0
+    },
+    {
+      "week": "2026-05-11",
+      "commits": 0
+    },
+    {
+      "week": "2026-05-18",
+      "commits": 0
+    },
+    {
+      "week": "2026-05-25",
+      "commits": 0
+    },
+    {
+      "week": "2026-06-01",
+      "commits": 0
+    },
+    {
+      "week": "2026-06-08",
+      "commits": 0
+    },
+    {
+      "week": "2026-06-15",
+      "commits": 0
+    },
+    {
+      "week": "2026-06-22",
+      "commits": 0
+    },
+    {
+      "week": "2026-06-29",
+      "commits": 0
+    },
+    {
+      "week": "2026-07-06",
+      "commits": 0
+    },
+    {
+      "week": "2026-07-13",
+      "commits": 0
+    },
+    {
+      "week": "2026-07-20",
+      "commits": 0
+    },
+    {
+      "week": "2026-07-27",
+      "commits": 11
+    },
+    {
+      "week": "2026-08-03",
+      "commits": 49
+    },
+    {
+      "week": "2026-08-10",
+      "commits": 74
+    },
+    {
+      "week": "2026-08-17",
+      "commits": 48
+    },
+    {
+      "week": "2026-08-24",
+      "commits": 107
+    },
+    {
+      "week": "2026-08-31",
+      "commits": 35
+    },
+    {
+      "week": "2026-09-07",
+      "commits": 14
+    },
+    {
+      "week": "2026-09-14",
+      "commits": 7
+    },
+    {
+      "week": "2026-09-21",
+      "commits": 0
+    },
+    {
+      "week": "2026-09-28",
+      "commits": 0
+    }
+  ],
+  "months": [
+    {
+      "month": "2025-12",
+      "commits": 7
+    },
+    {
+      "month": "2026-01",
+      "commits": 3
+    },
+    {
+      "month": "2026-02",
+      "commits": 82
+    },
+    {
+      "month": "2026-03",
+      "commits": 106
+    },
+    {
+      "month": "2026-04",
+      "commits": 51
+    },
+    {
+      "month": "2026-07",
+      "commits": 4
+    },
+    {
+      "month": "2026-08",
+      "commits": 288
+    },
+    {
+      "month": "2026-09",
+      "commits": 53
+    }
+  ],
+  "by_repo": [
+    {
+      "repo": "sports-event-management-dashboard",
+      "commits": 226
+    },
+    {
+      "repo": "portfolio",
+      "commits": 148
+    },
+    {
+      "repo": "application-tracker",
+      "commits": 103
+    },
+    {
+      "repo": "splitbill",
+      "commits": 51
+    },
+    {
+      "repo": "fatihaljabar",
+      "commits": 16
+    },
+    {
+      "repo": "ottodot-trial-booking",
+      "commits": 12
+    },
+    {
+      "repo": "tours-agent-demo",
+      "commits": 10
+    },
+    {
+      "repo": "project-ta",
+      "commits": 7
+    },
+    {
+      "repo": "sams-pos-demo",
+      "commits": 4
+    },
+    {
+      "repo": "rentcar-demo",
+      "commits": 3
+    },
+    {
+      "repo": "flutter-app",
+      "commits": 3
+    },
+    {
+      "repo": "vetready-demo",
+      "commits": 2
+    },
+    {
+      "repo": "blockwavestudio-demo",
+      "commits": 2
+    },
+    {
+      "repo": "blockwave-demo",
+      "commits": 2
+    },
+    {
+      "repo": "event-sport-demo",
+      "commits": 2
+    },
+    {
+      "repo": "blockwavestudio-dev",
+      "commits": 1
+    },
+    {
+      "repo": "catalog-order-demo",
+      "commits": 1
+    },
+    {
+      "repo": "fadlanportfolio-demo",
+      "commits": 1
+    }
+  ],
+  "languages": [
+    {
+      "language": "TypeScript",
+      "lines": 115359
+    },
+    {
+      "language": "CSS",
+      "lines": 5942
+    },
+    {
+      "language": "Dart",
+      "lines": 3990
+    },
+    {
+      "language": "Vue",
+      "lines": 3328
+    },
+    {
+      "language": "Python",
+      "lines": 2175
+    },
+    {
+      "language": "HTML",
+      "lines": 830
+    },
+    {
+      "language": "JavaScript",
+      "lines": 522
+    },
+    {
+      "language": "SQL",
+      "lines": 301
+    }
+  ],
+  "active_days": 67,
+  "longest_streak_days": 13
+}

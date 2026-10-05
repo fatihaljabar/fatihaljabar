@@ -1,0 +1,16 @@
+{
+  "route": "/",
+  "alt_route": "/#kategori (home scrolled to the 'Jelajahi karya.' category index + contact block, 'Short Film' row in its hover state)",
+  "how_run": "Repo /home/user/fadlanportfolio-demo. npm ci; npx vite build; npx vite preview --port 4702. Captured with Playwright Chromium (1440x900 DSF1, 390x844 DSF2 iPhone UA). Google Fonts stylesheet request fulfilled via page.route with @font-face rules built from @fontsource/barlow-condensed (700/800/900), @fontsource/dm-sans (400-700) and @fontsource/fragment-mono (400) v5.3.0, woff2 files also served via route, so typography matches production.",
+  "mocked": false,
+  "mock_summary": "Frontend-only site with its own static data (src/data.js); no backend and nothing mocked. Only the Google Fonts CSS/font files were substituted with identical families from @fontsource. No source files were edited.",
+  "issues": [
+    "BLOCKED IMAGES: every photo on the site is hot-linked from images.unsplash.com (hero film-projector photo in src/main.jsx and all 20 project thumbnails in src/data.js). The host is blocked here (proxy 403 on CONNECT). No copy exists in the repo, elsewhere under /home/user, or in any npm package (registry search for the photo IDs returns nothing). The real photos could not be captured.",
+    "To avoid broken-image glyphs/alt text, the failed <img> elements were set to visibility:hidden, so the hero panel shows as its dark #151317 frame with the 'DARI IDE MENJADI CERITA.' caption and gradient. In production a desaturated photo of film reels and a vintage projector sits behind that caption. This is visible in desktop-hero.png, desktop-full.png and mobile.png.",
+    "Because the category galleries (/commercial, /event, /social-media, /short-film, /music-video) are mostly images and render as empty grey 16:10 boxes without them, the alt shot uses the image-free category index and contact section of the home page instead. A gallery page or the video modal would need the real photos to be presentable.",
+    "desktop-alt.png shows the genuine hover state on the 'Short Film' row (orange #B83B00 text, 12px indent). desktop-full.png is the whole page (1937px, no crop needed). mobile.png is the whole page (2013 CSS px = 4026px, no crop needed)."
+  ],
+  "page_title": "Fadlan Creator — Videographer & Filmmaker",
+  "accent_hex": "#FC5000",
+  "background_hex": "#E2E2DF"
+}

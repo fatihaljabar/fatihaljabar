@@ -1,0 +1,2 @@
+Brand logos in logos.json come from Simple Icons (https://simpleicons.org), released under CC0 1.0.
+The trademarks belong to their owners.
